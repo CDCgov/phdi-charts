@@ -18,7 +18,7 @@ repos:
       rev: 0.2.3
       hooks:
           - id: yamlfmt
-            args: [--mapping, '6', --width, '80']
+            args: [--sequence, '6', --width, '80']
 #            --sequence, '2', --offset, '0', --colons,
     - repo: https://github.com/adrienverge/yamllint.git
       rev: v1.32.0

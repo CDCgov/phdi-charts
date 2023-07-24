@@ -18,6 +18,7 @@ repos:
       rev: 0.2.3
       hooks:
           - id: yamlfmt
+            args: [--width, '80']
     - repo: https://github.com/adrienverge/yamllint.git
       rev: v1.32.0
       hooks:

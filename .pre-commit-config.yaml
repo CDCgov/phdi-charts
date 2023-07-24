@@ -14,10 +14,6 @@ repos:
   - id: pretty-format-json
     args: [--autofix, --no-sort-keys]
     exclude: .*valid.*
-#  - repo: https://github.com/adrienverge/yamllint.git
-#    rev: v1.32.0
-#    hooks:
-#      - id: yamllint
 - repo: https://github.com/jumanjihouse/pre-commit-hook-yamlfmt
   rev: 0.2.3
   hooks:

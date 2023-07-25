@@ -1,61 +1,36 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "ingestion.fullname" . }}
+  name: {{ .Release.Name }}-ingestion-app
   labels:
-    {{- include "ingestion.labels" . | nindent 4 }}
+    app: ingestion-app
 spec:
-  {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
-  {{- end }}
   selector:
     matchLabels:
-      {{- include "ingestion.selectorLabels" . | nindent 6 }}
+      app: ingestion-app
   template:
     metadata:
-      {{- with .Values.podAnnotations }}
       annotations:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
       labels:
-        {{- include "ingestion.selectorLabels" . | nindent 8 }}
+        app: ingestion-app
     spec:
-      {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
-      serviceAccountName: {{ include "ingestion.serviceAccountName" . }}
-      securityContext:
-        {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
         - name: {{ .Chart.Name }}
-          securityContext:
-            {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          image: "ghcr.io/cdcgov/phdi/ingestion:"{{.Values.image.tag}}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-            - name: http
+            - name: {{ .Chart.Name }}
               containerPort: {{ .Values.service.port }}
-              protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
-          resources:
-            {{- toYaml .Values.resources | nindent 12 }}
-      {{- with .Values.nodeSelector }}
-      nodeSelector:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
-      {{- with .Values.affinity }}
-      affinity:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
-      {{- with .Values.tolerations }}
-      tolerations:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
+          env:
+            - name: SMARTY_AUTH_ID
+              valueFrom:
+                secretKeyRef:
+                  name: {{.Release.Name}}-geocoding-secrets
+                  key: auth-id
+            - name: SMARTY_AUTH_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: {{.Release.Name}}-geocoding-secrets
+                  key: token

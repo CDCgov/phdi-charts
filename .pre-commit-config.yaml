@@ -24,4 +24,4 @@ repos:
       hooks:
           - id: yamllint
             args: [-d relaxed]
-            exclude: .*/template
+            exclude: .*/templates

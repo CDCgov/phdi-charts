@@ -23,3 +23,5 @@ repos:
       rev: v1.32.0
       hooks:
           - id: yamllint
+            args: [-d relaxed]
+            exclude: .*/templates

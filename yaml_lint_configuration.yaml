@@ -2,4 +2,4 @@
 extends: relaxed
 
 ignore:
-    - .*/templates
+    - .*/templates/*

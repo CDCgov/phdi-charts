@@ -4,3 +4,4 @@ extends: relaxed
 ignore:
     - .*/templates/*.yaml
     - .*/templates/*.yml
+    - templates/

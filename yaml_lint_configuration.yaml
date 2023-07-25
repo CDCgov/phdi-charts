@@ -2,4 +2,5 @@
 extends: relaxed
 
 ignore:
-    - .*\/templates
+    - .*\/templates\/*.yaml
+    - .*\/templates\/*.yml

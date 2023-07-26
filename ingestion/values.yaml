@@ -3,11 +3,10 @@ replicaCount: 1
 image:
   repository: nginx
   pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "v1.0.7"
 
 service:
-  port: 80
+  port: 8080
 
 # Will not work as written.
 # These will need to be replaced by the equivalent Azure Key Vault values

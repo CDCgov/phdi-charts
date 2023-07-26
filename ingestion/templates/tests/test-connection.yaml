@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: "{{ include "ingestion.fullname" . }}-test-connection"
+  name: '{{ .Release.Name}}-ingestion-service'
   labels:
-    {{- include "ingestion.labels" . | nindent 4 }}
+    app: ingestion-app
   annotations:
     "helm.sh/hook": test
 spec:
@@ -11,5 +11,5 @@ spec:
     - name: wget
       image: busybox
       command: ['wget']
-      args: ['{{ include "ingestion.fullname" . }}:{{ .Values.service.port }}']
+      args: ['{{ .Release.Name}}-ingestion-service:{{ .Values.service.port }}']
   restartPolicy: Never

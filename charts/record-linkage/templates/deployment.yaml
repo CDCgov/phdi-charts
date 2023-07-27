@@ -13,6 +13,8 @@ spec:
     metadata:
       labels:
         app: record-linkage-app
+      annotations:
+        checksum/config: {{ include (print $.Template.Basepath "/configmap.yaml") . | sha256sum }}
     spec:
       containers:
       - name: {{ .Chart.Name }}

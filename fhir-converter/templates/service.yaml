@@ -1,15 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "fhir-converter.fullname" . }}
-  labels:
-    {{- include "fhir-converter.labels" . | nindent 4 }}
+  name: {{ .Release.Name}}-fhir-converter-service
 spec:
-  type: {{ .Values.service.type }}
+  type: LoadBalancer
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
+      targetPort: 8080
       protocol: TCP
-      name: http
   selector:
-    {{- include "fhir-converter.selectorLabels" . | nindent 4 }}
+    app: fhir-converter-ap

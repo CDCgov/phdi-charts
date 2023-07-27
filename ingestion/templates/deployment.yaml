@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-ingestion-app
+  labels:
+    app: ingestion-app
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: ingestion-app
+  template:
+    metadata:
+      annotations:
+      labels:
+        app: ingestion-app
+    spec:
+      imagePullSecrets:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: ghcr.io/cdcgov/phdi/ingestion:{{ .Values.image.tag }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: {{ .Chart.Name }}
+              containerPort: {{ .Values.service.port }}
+          env:
+            - name: SMARTY_AUTH_ID
+              valueFrom:
+                secretKeyRef:
+                  name: {{.Release.Name}}-geocoding-secrets
+                  key: auth-id
+            - name: SMARTY_AUTH_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: {{.Release.Name}}-geocoding-secrets
+                  key: token

@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: nginx
+  repository: ghcr.io/cdcgov/phdi/ingestion
   pullPolicy: IfNotPresent
   tag: "v1.0.7"
 

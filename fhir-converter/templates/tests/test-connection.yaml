@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: "{{ include "fhir-converter.fullname" . }}-test-connection"
+  name: '{{ .Release.Name}}-fhir-converter-service'
   labels:
-    {{- include "fhir-converter.labels" . | nindent 4 }}
+    app: fhir-converter-app
   annotations:
     "helm.sh/hook": test
 spec:
@@ -11,5 +11,5 @@ spec:
     - name: wget
       image: busybox
       command: ['wget']
-      args: ['{{ include "fhir-converter.fullname" . }}:{{ .Values.service.port }}']
+      args: ['{{ .Release.Name}}-fhir-converter-service:{{ .Values.service.port }}']
   restartPolicy: Never

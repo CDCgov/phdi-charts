@@ -7,8 +7,3 @@ image:
 
 service:
   port: 8080
-
-# Will not work as written.
-# These will need to be replaced by the equivalent Azure Key Vault values
-smartyAuthId: "$token"
-smartyToken: "$password"

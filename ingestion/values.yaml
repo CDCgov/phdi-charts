@@ -1,0 +1,14 @@
+replicaCount: 1
+
+image:
+  repository: ghcr.io/cdcgov/phdi/ingestion
+  pullPolicy: IfNotPresent
+  tag: "v1.0.7"
+
+service:
+  port: 8080
+
+# Will not work as written.
+# These will need to be replaced by the equivalent Azure Key Vault values
+smartyAuthId: "$token"
+smartyToken: "$password"

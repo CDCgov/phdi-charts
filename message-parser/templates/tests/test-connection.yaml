@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: "{{ include "message-parser.fullname" . }}-test-connection"
+  name: '{{ .Release.Name}}-message-parser-service'
   labels:
-    {{- include "message-parser.labels" . | nindent 4 }}
+    app: message-parser-app
   annotations:
     "helm.sh/hook": test
 spec:
@@ -11,5 +11,5 @@ spec:
     - name: wget
       image: busybox
       command: ['wget']
-      args: ['{{ include "message-parser.fullname" . }}:{{ .Values.service.port }}']
+      args: ['{{ .Release.Name}}-message-parser-service:{{ .Values.service.port }}']
   restartPolicy: Never

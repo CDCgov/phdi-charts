@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  fhir-converter:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-08-01T19:06:14.827707471Z"
+    description: A Helm chart for Kubernetes
+    digest: 022af4dd26071aef7d3819d3de2bd585fb0c06efa3c54523b1c4b686366fe2b5
+    name: fhir-converter
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/fhir-converter-0.1.0/fhir-converter-0.1.0.tgz
+    version: 0.1.0
   record-linkage-chart:
   - apiVersion: v2
     appVersion: 1.0.8
@@ -12,4 +23,4 @@ entries:
     urls:
     - https://github.com/CDCgov/phdi-charts/releases/download/record-linkage-chart-0.1.0/record-linkage-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2023-07-25T19:52:24.786372592Z"
+generated: "2023-08-01T19:06:14.827712471Z"

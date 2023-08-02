@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: '{{ .Release.Name}}-validation-service'
   labels:
-    app: ingestion-app
+    app: validation-app
   annotations:
     "helm.sh/hook": test
 spec:

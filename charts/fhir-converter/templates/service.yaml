@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name}}-fhir-converter-service
+spec:
+  type: LoadBalancer
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: 8080
+      protocol: TCP
+  selector:
+    app: fhir-converter-app

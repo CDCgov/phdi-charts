@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-fhir-converter-app
+  labels:
+    app: fhir-converter-app
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: fhir-converter-app
+  template:
+    metadata:
+      annotations:
+      labels:
+        app: fhir-converter-app
+    spec:
+      imagePullSecrets:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: ghcr.io/cdcgov/phdi/fhir-converter:{{ .Values.image.tag }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: {{ .Chart.Name }}
+              containerPort: {{ .Values.service.port }}

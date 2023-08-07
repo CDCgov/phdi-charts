@@ -18,7 +18,7 @@ spec:
       imagePullSecrets:
       containers:
         - name: {{ .Chart.Name }}
-          image: ghcr.io/cdcgov/phdi/message-parser:{{ .Values.image.tag }}
+          image: ghcr.io/cdcgov/phdi/message-parser:{{ default "latest" .Values.image.tag }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: {{ .Chart.Name }}

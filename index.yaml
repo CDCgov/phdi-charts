@@ -22,6 +22,17 @@ entries:
     urls:
     - https://github.com/CDCgov/phdi-charts/releases/download/fhir-converter-0.1.0/fhir-converter-0.1.0.tgz
     version: 0.1.0
+  message-parser-chart:
+  - apiVersion: v2
+    appVersion: 1.0.9
+    created: "2023-08-07T18:59:49.246710481Z"
+    description: A Helm chart for Kubernetes
+    digest: cf9bb8bf1ae415d1725147023ab172641440558eb3d54c5c6213eda20218d763
+    name: message-parser-chart
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/message-parser-chart-0.1.0/message-parser-chart-0.1.0.tgz
+    version: 0.1.0
   record-linkage-chart:
   - apiVersion: v2
     appVersion: 1.0.8
@@ -57,4 +68,4 @@ entries:
     urls:
     - https://github.com/CDCgov/phdi-charts/releases/download/validation-0.1.0/validation-0.1.0.tgz
     version: 0.1.0
-generated: "2023-08-07T18:22:56.344926015Z"
+generated: "2023-08-07T18:59:49.246720481Z"

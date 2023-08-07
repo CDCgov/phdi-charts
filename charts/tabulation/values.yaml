@@ -7,3 +7,6 @@ image:
 
 service:
   port: 8080
+
+fhirUrl: "$fhir-url"
+credManager: "azure"

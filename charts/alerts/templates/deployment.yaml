@@ -24,13 +24,15 @@ spec:
             - name: {{ .Chart.Name }}
               containerPort: {{ .Values.service.port }}
           env:
-            - name: SMARTY_AUTH_ID
+            - name: TEAMS_WEBHOOK_URL
               valueFrom:
                 secretKeyRef:
-                  name: {{.Release.Name}}-geocoding-secrets
-                  key: auth-id
-            - name: SMARTY_AUTH_TOKEN
+                  name: {{.Release.Name}}-alerts-secrets
+                  key: webhook-url
+            - name: COMMUNICATION_SERVICE_NAME
+              value: {{.Values.communicationServiceName}}
+            - name: SLACK_BOT_TOKEN
               valueFrom:
                 secretKeyRef:
-                  name: {{.Release.Name}}-geocoding-secrets
+                  name: {{.Release.Name}}-alerts-secrets
                   key: token

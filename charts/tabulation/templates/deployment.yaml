@@ -24,13 +24,7 @@ spec:
             - name: {{ .Chart.Name }}
               containerPort: {{ .Values.service.port }}
           env:
-            - name: SMARTY_AUTH_ID
-              valueFrom:
-                secretKeyRef:
-                  name: {{.Release.Name}}-geocoding-secrets
-                  key: auth-id
-            - name: SMARTY_AUTH_TOKEN
-              valueFrom:
-                secretKeyRef:
-                  name: {{.Release.Name}}-geocoding-secrets
-                  key: token
+            - name: fhir_url
+              value: {{ .Values.fhirUrl }}
+            - name: cred_manager
+              value: {{ .Values.credManager }}

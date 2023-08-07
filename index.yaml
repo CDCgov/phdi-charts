@@ -22,6 +22,28 @@ entries:
     urls:
     - https://github.com/CDCgov/phdi-charts/releases/download/fhir-converter-0.1.0/fhir-converter-0.1.0.tgz
     version: 0.1.0
+  fhir-converter-chart:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-08-07T19:01:51.098210096Z"
+    description: A Helm chart for Kubernetes
+    digest: df493a7b5ed1dde3125dac5cc93bc0106b62a80b3dcb99d8f208cc9eb2cbeded
+    name: fhir-converter-chart
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/fhir-converter-chart-0.1.0/fhir-converter-chart-0.1.0.tgz
+    version: 0.1.0
+  ingestion-chart:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-08-07T19:01:51.259178031Z"
+    description: A Helm chart for Kubernetes
+    digest: 59e620898631e7fa488904702ea07597623d2a1fb732b1c7bd317345c538441b
+    name: ingestion-chart
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/ingestion-chart-0.1.0/ingestion-chart-0.1.0.tgz
+    version: 0.1.0
   message-parser-chart:
   - apiVersion: v2
     appVersion: 1.0.9
@@ -68,4 +90,16 @@ entries:
     urls:
     - https://github.com/CDCgov/phdi-charts/releases/download/validation-0.1.0/validation-0.1.0.tgz
     version: 0.1.0
-generated: "2023-08-07T18:59:49.246720481Z"
+  validation-chart:
+  - apiVersion: v2
+    appVersion: v1.0.9
+    created: "2023-08-07T19:01:51.411219836Z"
+    description: A Helm chart for the DIBBs Validation Service
+    digest: 708ae1ecbb4ae7e9f002dd8b1fafaa254a927ae03ac05f848244f87e860bb946
+    icon: https://commons.wikimedia.org/wiki/File:US_CDC_logo.svg
+    name: validation-chart
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/validation-chart-0.1.0/validation-chart-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-08-07T19:01:51.411236936Z"

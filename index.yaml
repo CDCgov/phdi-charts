@@ -1,5 +1,16 @@
 apiVersion: v1
 entries:
+  alerts-chart:
+  - apiVersion: v2
+    appVersion: 1.0.8
+    created: "2023-08-07T18:22:56.13737935Z"
+    description: A Helm chart for Kubernetes
+    digest: 61d1903edf2b202a24de8e05f678cd31f6ee787f87fae95242b41161f420fbd0
+    name: alerts-chart
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/alerts-chart-0.1.0/alerts-chart-0.1.0.tgz
+    version: 0.1.0
   fhir-converter:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -23,6 +34,17 @@ entries:
     urls:
     - https://github.com/CDCgov/phdi-charts/releases/download/record-linkage-chart-0.1.0/record-linkage-chart-0.1.0.tgz
     version: 0.1.0
+  tabulation-chart:
+  - apiVersion: v2
+    appVersion: 1.0.8
+    created: "2023-08-07T18:22:56.344919115Z"
+    description: A Helm chart for Kubernetes
+    digest: 394cc04486f3280ef7106c6d0509c54889e31ad24033d9218868fcc0fea9fd35
+    name: tabulation-chart
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/tabulation-chart-0.1.0/tabulation-chart-0.1.0.tgz
+    version: 0.1.0
   validation:
   - apiVersion: v2
     appVersion: v1.0.9
@@ -35,4 +57,4 @@ entries:
     urls:
     - https://github.com/CDCgov/phdi-charts/releases/download/validation-0.1.0/validation-0.1.0.tgz
     version: 0.1.0
-generated: "2023-08-03T17:56:09.147434292Z"
+generated: "2023-08-07T18:22:56.344926015Z"

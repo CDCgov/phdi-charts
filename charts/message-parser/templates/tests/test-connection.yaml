@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: '{{ .Release.Name}}-message-parser-service'
+  labels:
+    app: message-parser-app
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ .Release.Name}}-message-parser-service:{{ .Values.service.port }}']
+  restartPolicy: Never

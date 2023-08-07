@@ -1,0 +1,12 @@
+replicaCount: 1
+
+image:
+  repository: ghcr.io/cdcgov/phdi/tabulation
+  pullPolicy: IfNotPresent
+  tag: "v1.0.9"
+
+service:
+  port: 8080
+
+fhirUrl: "$fhirurl"
+credManager: "azure"

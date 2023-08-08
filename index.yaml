@@ -3,6 +3,16 @@ entries:
   alerts-chart:
   - apiVersion: v2
     appVersion: 1.0.8
+    created: "2023-08-08T18:14:28.074910773Z"
+    description: A Helm chart for Kubernetes
+    digest: 9dfa2c6e04ecac24f32d1d356b24485199aceecc525df1d2c64840888d3c0373
+    name: alerts-chart
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/alerts-chart-0.1.4/alerts-chart-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: 1.0.8
     created: "2023-08-08T17:35:40.113388107Z"
     description: A Helm chart for Kubernetes
     digest: f63156b334d57b776c5b7f75eb3f346d2f9061ead02e20e96cb1d5f913a6a61f
@@ -55,6 +65,16 @@ entries:
   fhir-converter-chart:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2023-08-08T18:14:28.285446672Z"
+    description: A Helm chart for Kubernetes
+    digest: dc2d85ec47d86d4b15446c0aa1fd56ea15fe954f1b60e6fb5618aa9241af00ff
+    name: fhir-converter-chart
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/fhir-converter-chart-0.1.4/fhir-converter-chart-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2023-08-08T17:35:40.225861566Z"
     description: A Helm chart for Kubernetes
     digest: 29a968b319ca1a806aa846634b57a5579ed8df8df0e721e032269d8c53d491f6
@@ -94,6 +114,16 @@ entries:
     - https://github.com/CDCgov/phdi-charts/releases/download/fhir-converter-chart-0.1.0/fhir-converter-chart-0.1.0.tgz
     version: 0.1.0
   ingestion-chart:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-08-08T18:14:28.507000675Z"
+    description: A Helm chart for Kubernetes
+    digest: 5722794ca4c91af27975047aced7082f9fe3e4520112b3804293b0f2b52e1f06
+    name: ingestion-chart
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/ingestion-chart-0.1.4/ingestion-chart-0.1.4.tgz
+    version: 0.1.4
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2023-08-08T17:35:40.344445117Z"
@@ -137,6 +167,16 @@ entries:
   message-parser-chart:
   - apiVersion: v2
     appVersion: 1.0.9
+    created: "2023-08-08T18:14:28.719958596Z"
+    description: A Helm chart for Kubernetes
+    digest: ed598d79d5019abc3d3e498a77afe0de4b57cf4e2e5bcc0ba07229b09d2f21de
+    name: message-parser-chart
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/message-parser-chart-0.1.4/message-parser-chart-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: 1.0.9
     created: "2023-08-08T17:35:40.451623049Z"
     description: A Helm chart for Kubernetes
     digest: d74c4bc2b661367460460222003bf70c0dd36552cff52e1b3ba61cd9d9111df4
@@ -176,6 +216,17 @@ entries:
     - https://github.com/CDCgov/phdi-charts/releases/download/message-parser-chart-0.1.0/message-parser-chart-0.1.0.tgz
     version: 0.1.0
   record-linkage-chart:
+  - apiVersion: v2
+    appVersion: 1.0.8
+    created: "2023-08-08T18:14:28.964648619Z"
+    description: A Helm Chart for the DIBBs Record Linkage Service
+    digest: 0f4f08866c72849421999db80d2297550dbec48d9a576131d5fe5092dd587600
+    icon: https://commons.wikimedia.org/wiki/File:US_CDC_logo.svg
+    name: record-linkage-chart
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/record-linkage-chart-0.1.4/record-linkage-chart-0.1.4.tgz
+    version: 0.1.4
   - apiVersion: v2
     appVersion: 1.0.8
     created: "2023-08-08T17:35:40.587033755Z"
@@ -221,6 +272,16 @@ entries:
     - https://github.com/CDCgov/phdi-charts/releases/download/record-linkage-chart-0.1.0/record-linkage-chart-0.1.0.tgz
     version: 0.1.0
   tabulation-chart:
+  - apiVersion: v2
+    appVersion: 1.0.8
+    created: "2023-08-08T18:14:29.184548406Z"
+    description: A Helm chart for Kubernetes
+    digest: 267dafa3cc4348650454ce75c4ca0dfafeef2826b334a0913847fc786eb0f87e
+    name: tabulation-chart
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/tabulation-chart-0.1.4/tabulation-chart-0.1.4.tgz
+    version: 0.1.4
   - apiVersion: v2
     appVersion: 1.0.8
     created: "2023-08-08T17:35:40.758912598Z"
@@ -276,6 +337,17 @@ entries:
   validation-chart:
   - apiVersion: v2
     appVersion: v1.0.9
+    created: "2023-08-08T18:14:29.384733206Z"
+    description: A Helm chart for the DIBBs Validation Service
+    digest: fec161818eb18ff914f0d2c66643e968604de414b4f2cb030c024152b4b5e4bb
+    icon: https://commons.wikimedia.org/wiki/File:US_CDC_logo.svg
+    name: validation-chart
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/validation-chart-0.1.4/validation-chart-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: v1.0.9
     created: "2023-08-08T17:35:40.886050238Z"
     description: A Helm chart for the DIBBs Validation Service
     digest: 154cf3d358697e143028fcadd8d61bdf3ebb3983c84b10a78defbba02746f464
@@ -318,4 +390,4 @@ entries:
     urls:
     - https://github.com/CDCgov/phdi-charts/releases/download/validation-chart-0.1.0/validation-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2023-08-08T17:35:40.886361163Z"
+generated: "2023-08-08T18:14:29.384831407Z"

@@ -1,1 +1,2 @@
-skipExisting: True
+skip-existing: True
+mark-as-latest: False

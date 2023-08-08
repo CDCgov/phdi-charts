@@ -22,10 +22,10 @@ jobs:
         with:
           fetch-depth: 0
       
-      - name: Modify files with script
-        run: |
-          # Execute a custom script
-          python ./.github/config/modify_files.py ./charts ${{ github.event.inputs.versionNumber }}
+      # - name: Modify files with script
+      #   run: |
+      #     # Execute a custom script
+      #     python ./.github/config/modify_files.py ./charts ${{ github.event.inputs.versionNumber }}
 
       - name: Configure Git
         run: |

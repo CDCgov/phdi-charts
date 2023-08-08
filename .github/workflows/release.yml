@@ -5,6 +5,11 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      versionNumber:
+        description: "Set chart version"
+        required: true
+        type: string
 
 jobs:
   release:

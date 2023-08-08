@@ -1,13 +1,10 @@
-name: Release Charts
+name: Release Dev Version of Charts
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
     inputs:
       versionNumber:
-        description: "Set chart version"
+        description: "Set chart dev version. Example: d0.0.1"
         required: true
         type: string
 
@@ -22,6 +19,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Modify files with script
+        run: |
+          # Execute a custom script
+          python ./.github/config/modify_files.py ./charts ${{ github.event.inputs.versionNumber }}
+
       - name: Configure Git
         run: |
           git config --local user.email "action@github.com"
@@ -34,5 +36,6 @@ jobs:
         uses: helm/chart-releaser-action@v1.5.0
         with:
             config: ./.github/config/cr.yml
+            mark_as_latest: False
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"

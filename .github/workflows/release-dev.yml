@@ -1,9 +1,6 @@
 name: Release Dev Version of Charts
 
 on:
-  push:
-    branches:
-      - beta-versions
   workflow_dispatch:
     inputs:
       versionNumber:

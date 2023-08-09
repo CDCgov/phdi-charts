@@ -1,3 +1,1 @@
 skip-existing: True
-mark-as-latest: False
-package-path: .dev

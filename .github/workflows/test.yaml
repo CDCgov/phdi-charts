@@ -5,7 +5,7 @@ on:
     workflow_dispatch:
     pull_request:
         branches:
-            - '**'
+            - "**"
     push:
         branches:
             - main
@@ -21,3 +21,13 @@ jobs:
 
             - name: Lint YAML files
               run: yamllint -c yaml_lint_configuration.yaml .
+    unittests:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+            - name: Run Helm tests
+              run: |
+                  find charts/*/templates/tests -name '*.yaml' -print0 | while IFS= read -r -d '' testfile; do
+                  helm "$testfile"
+                  done

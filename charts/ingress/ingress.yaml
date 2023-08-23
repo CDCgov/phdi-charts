@@ -17,44 +17,44 @@ spec:
                 port:
                   number: 8080
           - path: /alerts/*
-              pathType: Prefix
-              backend:
-                service:
-                  name: alerts-service
-                  port:
-                    number: 8080
+            pathType: Prefix
+            backend:
+              service:
+                name: alerts-service
+                port:
+                  number: 8080
           - path: /fhir-converter/*
-              pathType: Prefix
-              backend:
-                service:
-                  name: fhir-converter-service
-                  port:
-                    number: 8080
+            pathType: Prefix
+            backend:
+              service:
+                name: fhir-converter-service
+                port:
+                  number: 8080
           - path: /message-parser/*
-              pathType: Prefix
-              backend:
-                service:
-                  name: message-parser-service
-                  port:
-                    number: 8080
+            pathType: Prefix
+            backend:
+              service:
+                name: message-parser-service
+                port:
+                  number: 8080
           - path: /record-linkage/*
-              pathType: Prefix
-              backend:
-                service:
-                  name: record-linkage-service
-                  port:
-                    number: 8080
+            pathType: Prefix
+            backend:
+              service:
+                name: record-linkage-service
+                port:
+                  number: 8080
           - path: /tabulation/*
-              pathType: Prefix
-              backend:
-                service:
-                  name: tabulation-service
-                  port:
-                    number: 8080
+            pathType: Prefix
+            backend:
+              service:
+                name: tabulation-service
+                port:
+                  number: 8080
           - path: /validation/*
-              pathType: Prefix
-              backend:
-                service:
-                  name: validation-service
-                  port:
-                    number: 8080
+            pathType: Prefix
+            backend:
+              service:
+                name: validation-service
+                port:
+                  number: 8080

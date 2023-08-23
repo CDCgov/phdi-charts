@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: {{ .Release.Name}}-fhir-converter-service
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   ports:
     - port: {{ .Values.service.port }}
       targetPort: 8080

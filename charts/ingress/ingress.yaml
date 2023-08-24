@@ -13,48 +13,48 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: ingestion-service
+                name: phdi-{env}-ingestion-service
                 port:
                   number: 8080
           - path: /alerts/*
             pathType: Prefix
             backend:
               service:
-                name: alerts-service
+                name: phdi-{env}-alerts-service
                 port:
                   number: 8080
           - path: /fhir-converter/*
             pathType: Prefix
             backend:
               service:
-                name: fhir-converter-service
+                name: phdi-{env}-fhir-converter-service
                 port:
                   number: 8080
           - path: /message-parser/*
             pathType: Prefix
             backend:
               service:
-                name: message-parser-service
+                name: phdi-{env}-message-parser-service
                 port:
                   number: 8080
           - path: /record-linkage/*
             pathType: Prefix
             backend:
               service:
-                name: record-linkage-service
+                name: phdi-{env}-record-linkage-service
                 port:
                   number: 8080
           - path: /tabulation/*
             pathType: Prefix
             backend:
               service:
-                name: tabulation-service
+                name: phdi-{env}-tabulation-service
                 port:
                   number: 8080
           - path: /validation/*
             pathType: Prefix
             backend:
               service:
-                name: validation-service
+                name: phdi-{env}-validation-service
                 port:
                   number: 8080

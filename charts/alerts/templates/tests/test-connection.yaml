@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: '{{ .Release.Name}}-alerts-service'
+  name: '{{ .Release.Name}}-alerts-app'
   labels:
     app: alerts-app
   annotations:
@@ -11,5 +11,5 @@ spec:
     - name: wget
       image: busybox
       command: ['wget']
-      args: ['{{ .Release.Name}}-alerts-service:{{ .Values.service.port }}']
+      args: ['{{ .Release.Name}}-alerts-app.default.svc.cluster.local:{{ .Values.service.port }}']
   restartPolicy: Never

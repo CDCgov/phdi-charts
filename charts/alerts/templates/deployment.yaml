@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}-alerts-app
+  name: "{{ .Release.Name }}-alerts-app"
   labels:
     app: alerts-app
 spec:
@@ -27,12 +27,12 @@ spec:
             - name: TEAMS_WEBHOOK_URL
               valueFrom:
                 secretKeyRef:
-                  name: {{.Release.Name}}-alerts-secrets
+                  name: "{{.Release.Name}}-alerts-secrets"
                   key: webhook-url
             - name: COMMUNICATION_SERVICE_NAME
               value: {{.Values.communicationServiceName}}
             - name: SLACK_BOT_TOKEN
               valueFrom:
                 secretKeyRef:
-                  name: {{.Release.Name}}-alerts-secrets
+                  name: "{{.Release.Name}}-alerts-secrets"
                   key: slack-bot-token

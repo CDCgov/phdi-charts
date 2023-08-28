@@ -1,60 +1,66 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingestion
+  name: ingress
   annotations:
     kubernetes.io/ingress.class: azure/application-gateway
     appgw.ingress.kubernetes.io/backend-path-prefix: "/"
+    cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
+  tls:
+    - hosts:
+        - {{ .Values.ingressHostname }}
+      secretName: phdi-playground-issuer-account-key
   rules:
-    - http:
+    - host: {{ .Values.ingressHostname }}
+      http:
         paths:
           - path: /ingestion/*
             pathType: Prefix
             backend:
               service:
-                name: phdi-{env}-ingestion-service
+                name: ingestion-service
                 port:
                   number: 8080
           - path: /alerts/*
             pathType: Prefix
             backend:
               service:
-                name: phdi-{env}-alerts-service
+                name: alerts-service
                 port:
                   number: 8080
           - path: /fhir-converter/*
             pathType: Prefix
             backend:
               service:
-                name: phdi-{env}-fhir-converter-service
+                name: fhir-converter-service
                 port:
                   number: 8080
           - path: /message-parser/*
             pathType: Prefix
             backend:
               service:
-                name: phdi-{env}-message-parser-service
+                name: message-parser-service
                 port:
                   number: 8080
           - path: /record-linkage/*
             pathType: Prefix
             backend:
               service:
-                name: phdi-{env}-record-linkage-service
+                name: record-linkage-service
                 port:
                   number: 8080
           - path: /tabulation/*
             pathType: Prefix
             backend:
               service:
-                name: phdi-{env}-tabulation-service
+                name: tabulation-service
                 port:
                   number: 8080
           - path: /validation/*
             pathType: Prefix
             backend:
               service:
-                name: phdi-{env}-validation-service
+                name: validation-service
                 port:
                   number: 8080

@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: '{{ .Release.Name}}-alerts-app'
+  name: '{{.Release.Name}}-app-test-connection'
   labels:
     app: alerts-app
   annotations:
@@ -10,6 +10,9 @@ spec:
   containers:
     - name: wget
       image: busybox
-      command: ['wget']
-      args: ['{{ .Release.Name}}-alerts-app.default.svc.cluster.local:{{ .Values.service.port }}']
+      command: ['/bin/sh', '-c']
+      args:
+        - |
+          echo "Fetching: {{.Release.Name}}-app:{{.Values.service.port}}" &&
+          wget "{{.Release.Name}}-app:{{.Values.service.port}}"
   restartPolicy: Never

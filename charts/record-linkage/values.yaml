@@ -19,3 +19,6 @@ databaseUser: "postgres"
 databasePort: "5432"
 patientTable: "patient"
 personTable: "person"
+
+appName: "record-linkage-app"
+serviceName: "record-linkage-service"

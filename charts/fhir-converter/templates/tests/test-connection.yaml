@@ -1,18 +1,15 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: '{{ .Release.Name}}-app-test-connection'
+  name: "{{.Release.Name}}-{{.Values.name}}-test"
   labels:
-    app: fhir-converter-app
+    app: "{{.Values.appName}}"
   annotations:
     "helm.sh/hook": test
 spec:
   containers:
     - name: wget
       image: busybox
-      command: ['/bin/sh', '-c']
-      args:
-        - |
-          echo "Fetching: {{.Release.Name}}-app:{{.Values.service.port}}" &&
-          wget "{{.Release.Name}}-app:{{.Values.service.port}}"
+      command: ["wget"]
+      args: ["{{.Release.Name}}-{{.Values.serviceName}}:{{ .Values.service.port}}"]
   restartPolicy: Never

@@ -1,3 +1,5 @@
+---
+
 # Default values for validation.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
@@ -12,3 +14,7 @@ image:
 
 service:
   port: 80
+
+appName: "validation-app"
+secretName: "validation-secrets"
+serviceName: "validation-service"

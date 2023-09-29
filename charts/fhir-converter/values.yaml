@@ -1,3 +1,4 @@
+---
 replicaCount: 1
 
 image:
@@ -7,3 +8,7 @@ image:
 
 service:
   port: 8080
+
+name: "fhir-converter"
+appName: "fhir-convertor-app"
+serviceName: "fhir-converter-service"

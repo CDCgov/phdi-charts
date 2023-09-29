@@ -1,15 +1,12 @@
 apiVersion: v1
-kind: Pod
+kind: Service
 metadata:
-  name: {{ .Release.Name}}-record-linkage-service
-  labels:
-    app: record-linkage-app
-  annotations:
-    "helm.sh/hook": test
+  name: "{{.Release.Name}}-{{.Values.serviceName}}"
 spec:
-  containers:
-    - name: wget
-      image: busybox
-      command: ['wget']
-      args: ['{{ .Release.Name}}-record-linkage-service:{{ .Values.service.port }}']
-  restartPolicy: Never
+  type: ClusterIP
+  ports:
+    - port: {{.Values.service.port}}
+      targetPort: 8080
+      protocol: TCP
+  selector:
+    app: {{.Values.appName}}

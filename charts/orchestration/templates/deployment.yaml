@@ -1,0 +1,26 @@
+﻿---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "{{.Release.Name }}-orchestration-app"
+  labels:
+    app: orchestration-app
+spec:
+  replicas: {{.Values.replicaCount}}
+  selector:
+    matchLabels:
+      app: orchestration-app
+  template:
+    metadata:
+      annotations:
+      labels:
+        app: orchestration-app
+    spec:
+      imagePullSecrets:
+      containers:
+        - name: {{.Chart.Name}}
+          image: ghcr.io/cdcgov/phdi/orchestration:{{ .Values.image.tag }}
+          imagePullPolicy: {{.Values.image.pullPolicy}}
+          ports:
+            - name: {{.Chart.Name | trunc 14}}
+              containerPort: {{.Values.service.port}}

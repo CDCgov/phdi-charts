@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: fhir-orchestration-service
+  name: orchestration-service
 spec:
   type: ClusterIP
   ports:

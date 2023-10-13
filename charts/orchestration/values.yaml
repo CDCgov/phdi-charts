@@ -7,3 +7,12 @@ image:
 
 service:
   port: 8080
+
+alerts-url: "$alertsUrl"
+fhir-convertor-url: "$fhirConvertorUrl"
+ingestion-url: "$ingestionUrl"
+ingress-url: "$ingressUrl"
+message-parser-url: "$messageParserUrl"
+record-linkage-url: "$recordLinkageUrl"
+tabulation-url: "$tabulationUrl"
+validation-url: "$validationUrl"

@@ -24,3 +24,44 @@ spec:
           ports:
             - name: {{.Chart.Name | trunc 14}}
               containerPort: {{.Values.service.port}}
+          env:
+            - name: alerts-url
+              valueFrom:
+                secretKeyRef:
+                  name: "{{.Release.Name}}-orchestration-secrets"
+                  key: alerts-url
+            - name: fhir-convertor-url
+              valueFrom:
+                secretKeyRef:
+                  name: "{{.Release.Name}}-orchestration-secrets"
+                  key: fhir-convertor-url
+            - name: ingestion-url
+              valueFrom:
+                secretKeyRef:
+                  name: "{{.Release.Name}}-orchestration-secrets"
+                  key: ingestion-url
+            - name: ingress-url
+              valueFrom:
+                secretKeyRef:
+                  name: "{{.Release.Name}}-orchestration-secrets"
+                  key: ingress-url
+            - name: message-parser-url
+              valueFrom:
+                secretKeyRef:
+                  name: "{{.Release.Name}}-orchestration-secrets"
+                  key: message-parser-url
+            - name: record-linkage-url
+              valueFrom:
+                secretKeyRef:
+                  name: "{{.Release.Name}}-orchestration-secrets"
+                  key: record-linkage-url
+            - name: tabulation-url
+              valueFrom:
+                secretKeyRef:
+                  name: "{{.Release.Name}}-orchestration-secrets"
+                  key: tabulation-url
+            - name: validation-url
+              valueFrom:
+                secretKeyRef:
+                  name: "{{.Release.Name}}-orchestration-secrets"
+                  key: validation-url

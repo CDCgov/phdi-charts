@@ -43,7 +43,7 @@ jobs:
               check-latest: true
 
           - name: Set up chart-testing
-            uses: helm/chart-testing-action
+            uses: helm/chart-testing-action@v2.4.0
 
           - name: Create kind cluster
             uses: helm/kind-action@v1.7.0

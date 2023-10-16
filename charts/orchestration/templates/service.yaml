@@ -1,0 +1,13 @@
+﻿---
+apiVersion: v1
+kind: Service
+metadata:
+  name: orchestration-service
+spec:
+  type: ClusterIP
+  ports:
+    - port: {{.Values.service.port}}
+      targetPort: 8080
+      protocol: TCP
+  selector:
+    app: orchestration-app

@@ -71,3 +71,6 @@ data/
 persistent_storage/
 
 /kubernetes/secrets.yaml
+
+# CT Output
+ct_previous_revision*

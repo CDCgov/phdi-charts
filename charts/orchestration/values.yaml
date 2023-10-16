@@ -1,0 +1,18 @@
+replicaCount: 1
+
+image:
+  repository: ghcr.io/cdcgov/phdi/orchestration
+  pullPolicy: IfNotPresent
+  tag: "v1.0.7"
+
+service:
+  port: 8080
+
+alerts-url: "$alertsUrl"
+fhir-converter-url: "$fhirConverterUrl"
+ingestion-url: "$ingestionUrl"
+ingress-url: "$ingressUrl"
+message-parser-url: "$messageParserUrl"
+record-linkage-url: "$recordLinkageUrl"
+tabulation-url: "$tabulationUrl"
+validation-url: "$validationUrl"

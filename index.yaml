@@ -316,6 +316,17 @@ entries:
     urls:
     - https://github.com/CDCgov/phdi-charts/releases/download/message-parser-chart-0.1.0/message-parser-chart-0.1.0.tgz
     version: 0.1.0
+  orchestration-chart:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-10-16T17:02:59.06850741Z"
+    description: A Helm chart for Kubernetes
+    digest: 8aa1fe8cb73f08c0933328eedb7f85d049aa9ac2176cc5b508ca5e123b7469bc
+    name: orchestration-chart
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/orchestration-chart-0.1.6/orchestration-chart-0.1.6.tgz
+    version: 0.1.6
   record-linkage-chart:
   - apiVersion: v2
     appVersion: 1.0.8
@@ -555,4 +566,4 @@ entries:
     urls:
     - https://github.com/CDCgov/phdi-charts/releases/download/validation-chart-0.1.0/validation-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2023-08-28T21:26:45.396103264Z"
+generated: "2023-10-16T17:02:59.068656818Z"

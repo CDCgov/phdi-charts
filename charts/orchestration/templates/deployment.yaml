@@ -30,11 +30,11 @@ spec:
                 secretKeyRef:
                   name: "{{.Release.Name}}-orchestration-secrets"
                   key: alerts-url
-            - name: FHIR_CONVERTOR_URL
+            - name: FHIR_CONVERTER_URL
               valueFrom:
                 secretKeyRef:
                   name: "{{.Release.Name}}-orchestration-secrets"
-                  key: fhir-convertor-url
+                  key: fhir-converter-url
             - name: INGESTION_URL
               valueFrom:
                 secretKeyRef:

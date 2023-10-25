@@ -1,62 +1,62 @@
-﻿---
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: "{{.Release.Name }}-orchestration-app"
-  labels:
-    app: orchestration-app
-spec:
-  replicas: {{.Values.replicaCount}}
-  selector:
-    matchLabels:
-      app: orchestration-app
-  template:
-    metadata:
-      annotations:
-      labels:
+    name: '{{.Release.Name }}-orchestration-app'
+    labels:
         app: orchestration-app
-    spec:
-      imagePullSecrets:
-      containers:
-        - name: {{.Chart.Name}}
-          image: ghcr.io/cdcgov/phdi/orchestration:{{ .Values.image.tag }}
-          imagePullPolicy: {{.Values.image.pullPolicy}}
-          ports:
-            - name: {{.Chart.Name | trunc 14}}
-              containerPort: {{.Values.service.port}}
-          env:
-            - name: ALERTS_URL
-              valueFrom:
-                secretKeyRef:
-                  name: "{{.Release.Name}}-orchestration-secrets"
-                  key: alerts-url
-            - name: FHIR_CONVERTER_URL
-              valueFrom:
-                secretKeyRef:
-                  name: "{{.Release.Name}}-orchestration-secrets"
-                  key: fhir-converter-url
-            - name: INGESTION_URL
-              valueFrom:
-                secretKeyRef:
-                  name: "{{.Release.Name}}-orchestration-secrets"
-                  key: ingestion-url
-            - name: MESSAGE_PARSER_URL
-              valueFrom:
-                secretKeyRef:
-                  name: "{{.Release.Name}}-orchestration-secrets"
-                  key: message-parser-url
-            - name: RECORD_LINKAGE_URL
-              valueFrom:
-                secretKeyRef:
-                  name: "{{.Release.Name}}-orchestration-secrets"
-                  key: record-linkage-url
-            - name: TABULATION_URL
-              valueFrom:
-                secretKeyRef:
-                  name: "{{.Release.Name}}-orchestration-secrets"
-                  key: tabulation-url
-            - name: VALIDATION_URL
-              valueFrom:
-                secretKeyRef:
-                  name: "{{.Release.Name}}-orchestration-secrets"
-                  key: validation-url
+spec:
+    replicas: {{.Values.replicaCount: null}: null}
+    selector:
+        matchLabels:
+            app: orchestration-app
+    template:
+        metadata:
+            annotations:
+            labels:
+                app: orchestration-app
+        spec:
+            imagePullSecrets:
+            containers:
+                - name: {{.Chart.Name: null}: null}
+                  image: ghcr.io/cdcgov/phdi/orchestration:{{ .Values.image.tag }}
+                  imagePullPolicy: {{.Values.image.pullPolicy: null}: null}
+                  ports:
+                      - name: {{.Chart.Name | trunc 14: null}: null}
+                        containerPort: {{.Values.service.port: null}: null}
+                  env:
+                      - name: ALERTS_URL
+                        valueFrom:
+                            secretKeyRef:
+                                name: '{{.Release.Name}}-orchestration-secrets'
+                                key: alerts-url
+                      - name: FHIR_CONVERTER_URL
+                        valueFrom:
+                            secretKeyRef:
+                                name: '{{.Release.Name}}-orchestration-secrets'
+                                key: fhir-converter-url
+                      - name: INGESTION_URL
+                        valueFrom:
+                            secretKeyRef:
+                                name: '{{.Release.Name}}-orchestration-secrets'
+                                key: ingestion-url
+                      - name: MESSAGE_PARSER_URL
+                        valueFrom:
+                            secretKeyRef:
+                                name: '{{.Release.Name}}-orchestration-secrets'
+                                key: message-parser-url
+                      - name: RECORD_LINKAGE_URL
+                        valueFrom:
+                            secretKeyRef:
+                                name: '{{.Release.Name}}-orchestration-secrets'
+                                key: record-linkage-url
+                      - name: TABULATION_URL
+                        valueFrom:
+                            secretKeyRef:
+                                name: '{{.Release.Name}}-orchestration-secrets'
+                                key: tabulation-url
+                      - name: VALIDATION_URL
+                        valueFrom:
+                            secretKeyRef:
+                                name: '{{.Release.Name}}-orchestration-secrets'
+                                key: validation-url

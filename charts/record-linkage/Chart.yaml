@@ -1,5 +1,5 @@
 apiVersion: v2
-name: record-linkage-chart
+name: record-link-chart
 description: A Helm Chart for the DIBBs Record Linkage Service
 type: application
 version: 0.1.6

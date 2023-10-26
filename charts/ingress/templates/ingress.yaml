@@ -1,66 +1,74 @@
+---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ingress
-  annotations:
-    kubernetes.io/ingress.class: azure/application-gateway
-    appgw.ingress.kubernetes.io/backend-path-prefix: "/"
-    cert-manager.io/cluster-issuer: letsencrypt-prod
+    name: ingress
+    annotations:
+        kubernetes.io/ingress.class: azure/application-gateway
+        appgw.ingress.kubernetes.io/backend-path-prefix: /
+        cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
-  tls:
-    - hosts:
-        - {{ .Values.ingressHostname }}
-      secretName: phdi-playground-issuer-account-key
-  rules:
-    - host: {{ .Values.ingressHostname }}
-      http:
-        paths:
-          - path: /ingestion/*
-            pathType: Prefix
-            backend:
-              service:
-                name: ingestion-service
-                port:
-                  number: 8080
-          - path: /alerts/*
-            pathType: Prefix
-            backend:
-              service:
-                name: alerts-service
-                port:
-                  number: 8080
-          - path: /fhir-converter/*
-            pathType: Prefix
-            backend:
-              service:
-                name: fhir-converter-service
-                port:
-                  number: 8080
-          - path: /message-parser/*
-            pathType: Prefix
-            backend:
-              service:
-                name: message-parser-service
-                port:
-                  number: 8080
-          - path: /record-linkage/*
-            pathType: Prefix
-            backend:
-              service:
-                name: record-linkage-service
-                port:
-                  number: 8080
-          - path: /tabulation/*
-            pathType: Prefix
-            backend:
-              service:
-                name: tabulation-service
-                port:
-                  number: 8080
-          - path: /validation/*
-            pathType: Prefix
-            backend:
-              service:
-                name: validation-service
-                port:
-                  number: 8080
+    tls:
+        - hosts:
+              - {{.Values.ingressHostname: null}: null}
+          secretName: phdi-playground-issuer-account-key
+    rules:
+        - host: {{.Values.ingressHostname: null}: null}
+          http:
+              paths:
+                  - path: /ingestion/*
+                    pathType: Prefix
+                    backend:
+                        service:
+                            name: ingestion-service
+                            port:
+                                number: 8080
+                  - path: /alerts/*
+                    pathType: Prefix
+                    backend:
+                        service:
+                            name: alerts-service
+                            port:
+                                number: 8080
+                  - path: /fhir-converter/*
+                    pathType: Prefix
+                    backend:
+                        service:
+                            name: fhir-converter-service
+                            port:
+                                number: 8080
+                  - path: /message-parser/*
+                    pathType: Prefix
+                    backend:
+                        service:
+                            name: message-parser-service
+                            port:
+                                number: 8080
+                  - path: /record-linkage/*
+                    pathType: Prefix
+                    backend:
+                        service:
+                            name: record-linkage-service
+                            port:
+                                number: 8080
+                  - path: /tabulation/*
+                    pathType: Prefix
+                    backend:
+                        service:
+                            name: tabulation-service
+                            port:
+                                number: 8080
+                  - path: /validation/*
+                    pathType: Prefix
+                    backend:
+                        service:
+                            name: validation-service
+                            port:
+                                number: 8080
+                  - path: /orchestration/*
+                    pathType: Prefix
+                    backend:
+                        service:
+                            name: orchestration-service
+                            port:
+                                number: 8080

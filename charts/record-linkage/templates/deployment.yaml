@@ -21,43 +21,43 @@ spec:
             - name: {{.Chart.Name}}
               containerPort: {{.Values.service.port}}
           env:
-        - name: MPI_DB_TYPE
-          valueFrom:
-            secretKeyRef:
-              name: "{{.Release.Name}}-mpi-secrets"
-              key: db_type
-        - name: MPI_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: "{{.Release.Name}}-mpi-secrets"
-              key: db_password
-        - name: MPI_DBNAME
-          valueFrom:
-            secretKeyRef:
-              name: "{{.Release.Name}}-mpi-secrets"
-              key: db_name
-        - name: MPI_HOST
-          valueFrom:
-            secretKeyRef:
-              name: "{{.Release.Name}}-mpi-secrets"
-              key: db_host
-        - name: MPI_USER
-          valueFrom:
-            secretKeyRef:
-              name: "{{.Release.Name}}-mpi-secrets"
-              key: db_user
-        - name: MPI_PORT
-          valueFrom:
-            secretKeyRef:
-              name: "{{.Release.Name}}-mpi-secrets"
-              key: db_port
-        - name: MPI_PATIENT_TABLE
-          valueFrom:
-            secretKeyRef:
-              name: "{{.Release.Name}}-mpi-secrets"
-              key: patient_table
-        - name: MPI_PERSON_TABLE
-          valueFrom:
-            secretKeyRef:
-              name: "{{.Release.Name}}-mpi-secrets"
-              key: person_table
+            - name: MPI_DB_TYPE
+              valueFrom:
+                secretKeyRef:
+                  name: "{{.Release.Name}}-mpi-secrets"
+                  key: db_type
+            - name: MPI_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: "{{.Release.Name}}-mpi-secrets"
+                  key: db_password
+            - name: MPI_DBNAME
+              valueFrom:
+                secretKeyRef:
+                  name: "{{.Release.Name}}-mpi-secrets"
+                  key: db_name
+            - name: MPI_HOST
+              valueFrom:
+                secretKeyRef:
+                  name: "{{.Release.Name}}-mpi-secrets"
+                  key: db_host
+            - name: MPI_USER
+              valueFrom:
+                secretKeyRef:
+                  name: "{{.Release.Name}}-mpi-secrets"
+                  key: db_user
+            - name: MPI_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: "{{.Release.Name}}-mpi-secrets"
+                  key: db_port
+            - name: MPI_PATIENT_TABLE
+              valueFrom:
+                secretKeyRef:
+                  name: "{{.Release.Name}}-mpi-secrets"
+                  key: patient_table
+            - name: MPI_PERSON_TABLE
+              valueFrom:
+                secretKeyRef:
+                  name: "{{.Release.Name}}-mpi-secrets"
+                  key: person_table

@@ -18,7 +18,8 @@ spec:
         - name: {{.Chart.Name}}
           image: "ghcr.io/cdcgov/phdi/record-linkage:{{.Values.image.tag}}"
           ports:
-        - containerPort: 8000
+            - name: {{.Chart.Name}}
+              containerPort: {{.Values.service.port}}
           env:
         - name: MPI_DB_TYPE
           valueFrom:

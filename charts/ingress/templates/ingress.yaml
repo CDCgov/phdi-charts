@@ -10,10 +10,10 @@ metadata:
 spec:
     tls:
         - hosts:
-              - {{.Values.ingressHostname: null}: null}
+              - {{.Values.ingressHostname}}
           secretName: phdi-playground-issuer-account-key
     rules:
-        - host: {{.Values.ingressHostname: null}: null}
+        - host: {{.Values.ingressHostname}}
           http:
               paths:
                   - path: /ingestion/*

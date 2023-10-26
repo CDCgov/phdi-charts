@@ -4,26 +4,26 @@ kind: Deployment
 metadata:
     name: '{{.Release.Name}}-{{.Values.appName}}'
     labels:
-        app: {{.Values.appName: null}: null}
+        app: {{.Values.appName}}
 spec:
-    replicas: {{.Values.replicaCount: null}: null}
+    replicas: {{.Values.replicaCount}}
     selector:
         matchLabels:
-            app: {{.Values.appName: null}: null}
+            app: {{.Values.appName}}
     template:
         metadata:
             annotations:
             labels:
-                app: {{.Values.appName: null}: null}
+                app: {{.Values.appName}}
         spec:
             imagePullSecrets:
             containers:
-                - name: {{.Chart.Name: null}: null}
+                - name: {{.Chart.Name}}
                   image: ghcr.io/cdcgov/phdi/alerts:{{ .Values.image.tag }}
-                  imagePullPolicy: {{.Values.image.pullPolicy: null}: null}
+                  imagePullPolicy: {{.Values.image.pullPolicy}}
                   ports:
-                      - name: {{.Chart.Name: null}: null}
-                        containerPort: {{.Values.service.port: null}: null}
+                      - name: {{.Chart.Name}}
+                        containerPort: {{.Values.service.port}}
                   env:
                       - name: TEAMS_WEBHOOK_URL
                         valueFrom:
@@ -31,7 +31,7 @@ spec:
                                 name: '{{.Release.Name}}-{{.Values.secretName}}'
                                 key: webhook-url
                       - name: COMMUNICATION_SERVICE_NAME
-                        value: {{.Values.communicationServiceName: null}: null}
+                        value: {{.Values.communicationServiceName}}
                       - name: SLACK_BOT_TOKEN
                         valueFrom:
                             secretKeyRef:

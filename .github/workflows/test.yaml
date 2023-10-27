@@ -47,6 +47,5 @@ jobs:
             - name: Create kind cluster
               uses: helm/kind-action@v1.7.0
 
-          # Loop through each chart and run helm upgrade and helm test
             - name: Upgrade and Test All Charts
               run: ct install --all --target-branch ${{ github.event.repository.default_branch}}

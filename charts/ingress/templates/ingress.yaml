@@ -9,11 +9,11 @@ metadata:
         cert-manager.io/cluster-issuer: letsencrypt-prod
 spec:
     tls:
-        - hosts:
-              - {{.Values.ingressHostname: null}: null}
-          secretName: phdi-playground-issuer-account-key
+      - hosts:
+          - {{ .Values.ingressHostname }}
+        secretName: phdi-playground-issuer-account-key
     rules:
-        - host: {{.Values.ingressHostname: null}: null}
+        - host: {{ .Values.ingressHostname }}
           http:
               paths:
                   - path: /ingestion/*

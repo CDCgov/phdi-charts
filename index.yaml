@@ -227,6 +227,16 @@ entries:
   ingress-chart:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2023-10-27T22:19:30.783948802Z"
+    description: A Helm chart for Kubernetes
+    digest: fcbe62817433129185177c3f7e512bbee650df8a9e5776bbc36480a5b3d32ff5
+    name: ingress-chart
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/ingress-chart-0.1.7/ingress-chart-0.1.7.tgz
+    version: 0.1.7
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2023-08-28T21:26:44.738582762Z"
     description: A Helm chart for Kubernetes
     digest: 223e8ef94cd38964b84742a2a385eb4b392744a7d5c5808627e933a59ba2d0bd
@@ -577,4 +587,4 @@ entries:
     urls:
     - https://github.com/CDCgov/phdi-charts/releases/download/validation-chart-0.1.0/validation-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2023-10-26T16:48:19.291493295Z"
+generated: "2023-10-27T22:19:30.784503507Z"

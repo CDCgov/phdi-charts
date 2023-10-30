@@ -1,6 +1,7 @@
+---
 apiVersion: v2
 name: tabulation-chart
 description: A Helm chart for Kubernetes
 type: application
 version: 0.1.6
-appVersion: "1.0.8"
+appVersion: 1.1.0

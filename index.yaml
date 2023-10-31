@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   alerts-chart:
   - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2023-10-31T19:51:21.247043916Z"
+    description: A Helm chart for Kubernetes
+    digest: 1c86f174171b7a130789cf7d8ad43ced80bd2f12325e8ef0ad683950b04f1124
+    name: alerts-chart
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/alerts-chart-0.1.7/alerts-chart-0.1.7.tgz
+    version: 0.1.7
+  - apiVersion: v2
     appVersion: 1.0.8
     created: "2023-08-28T21:26:44.029391494Z"
     description: A Helm chart for Kubernetes
@@ -84,6 +94,16 @@ entries:
     version: 0.1.0
   fhir-converter-chart:
   - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2023-10-31T19:51:21.434718748Z"
+    description: A Helm chart for Kubernetes
+    digest: 8c72f0ed12c607715ff5ab7b55002943e381218b63fc0f8200dbd22abd5577c3
+    name: fhir-converter-chart
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/fhir-converter-chart-0.1.7/fhir-converter-chart-0.1.7.tgz
+    version: 0.1.7
+  - apiVersion: v2
     appVersion: 1.16.0
     created: "2023-08-28T21:26:44.199961371Z"
     description: A Helm chart for Kubernetes
@@ -154,6 +174,16 @@ entries:
     - https://github.com/CDCgov/phdi-charts/releases/download/fhir-converter-chart-0.1.0/fhir-converter-chart-0.1.0.tgz
     version: 0.1.0
   ingestion-chart:
+  - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2023-10-31T19:51:21.646750902Z"
+    description: A Helm chart for Kubernetes
+    digest: a396fdc2a407af940a26e00b6a97c5bde6540029fd22c24338b0a6451460bb6e
+    name: ingestion-chart
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/ingestion-chart-0.1.7/ingestion-chart-0.1.7.tgz
+    version: 0.1.7
   - apiVersion: v2
     appVersion: 1.16.0
     created: "2023-08-28T21:26:44.358902963Z"
@@ -226,6 +256,16 @@ entries:
     version: 0.1.0
   ingress-chart:
   - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2023-10-31T19:51:21.874632534Z"
+    description: A Helm chart for Kubernetes
+    digest: fe32e729860b35f43aba406aa2316adf0337c807942890fa8920c6243ebdc549
+    name: ingress-chart
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/ingress-chart-0.1.9/ingress-chart-0.1.9.tgz
+    version: 0.1.9
+  - apiVersion: v2
     appVersion: 1.16.0
     created: "2023-10-27T23:19:44.847123737Z"
     description: A Helm chart for Kubernetes
@@ -266,6 +306,16 @@ entries:
     - https://github.com/CDCgov/phdi-charts/releases/download/ingress-chart-0.1.5/ingress-chart-0.1.5.tgz
     version: 0.1.5
   message-parser-chart:
+  - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2023-10-31T19:51:22.0690678Z"
+    description: A Helm chart for Kubernetes
+    digest: efea79174a4555502a9d8884276922c13b5a0d6a892552122fbe65bc328dca65
+    name: message-parser-chart
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/message-parser-chart-0.1.7/message-parser-chart-0.1.7.tgz
+    version: 0.1.7
   - apiVersion: v2
     appVersion: 1.0.9
     created: "2023-08-28T21:26:44.920660821Z"
@@ -338,6 +388,16 @@ entries:
     version: 0.1.0
   orchestration:
   - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2023-10-31T19:51:22.244765873Z"
+    description: A Helm chart for Kubernetes
+    digest: 9e54cd0906021c4ab7826184a43a9a2fb7aea3a31db20f08def1fbb6955379f8
+    name: orchestration
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/orchestration-0.1.7/orchestration-0.1.7.tgz
+    version: 0.1.7
+  - apiVersion: v2
     appVersion: 1.16.0
     created: "2023-10-26T16:48:19.291407396Z"
     description: A Helm chart for Kubernetes
@@ -358,6 +418,18 @@ entries:
     urls:
     - https://github.com/CDCgov/phdi-charts/releases/download/orchestration-chart-0.1.6/orchestration-chart-0.1.6.tgz
     version: 0.1.6
+  rec-link-chart:
+  - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2023-10-31T19:51:22.459698741Z"
+    description: A Helm Chart for the DIBBs Record Linkage Service
+    digest: 5755c3d28e457a5c8a93e73438d78ebafc473e57a88d774df7d399b0b4454666
+    icon: https://commons.wikimedia.org/wiki/File:US_CDC_logo.svg
+    name: rec-link-chart
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/rec-link-chart-0.1.7/rec-link-chart-0.1.7.tgz
+    version: 0.1.7
   record-linkage-chart:
   - apiVersion: v2
     appVersion: 1.0.8
@@ -437,6 +509,16 @@ entries:
     - https://github.com/CDCgov/phdi-charts/releases/download/record-linkage-chart-0.1.0/record-linkage-chart-0.1.0.tgz
     version: 0.1.0
   tabulation-chart:
+  - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2023-10-31T19:51:22.638730131Z"
+    description: A Helm chart for Kubernetes
+    digest: d9268fde7476216858eb5c03a36b4e46e0d1bcd65975d04027809e6414aba963
+    name: tabulation-chart
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/tabulation-chart-0.1.7/tabulation-chart-0.1.7.tgz
+    version: 0.1.7
   - apiVersion: v2
     appVersion: 1.0.8
     created: "2023-08-28T21:26:45.232270452Z"
@@ -521,6 +603,17 @@ entries:
     version: 0.1.0
   validation-chart:
   - apiVersion: v2
+    appVersion: v1.1.1
+    created: "2023-10-31T19:51:22.822239042Z"
+    description: A Helm chart for the DIBBs Validation Service
+    digest: b4b317d2b3ed4a8babeeb3c495cd1de14e067ef2e9082c1a33503e7540416508
+    icon: https://commons.wikimedia.org/wiki/File:US_CDC_logo.svg
+    name: validation-chart
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/validation-chart-0.1.7/validation-chart-0.1.7.tgz
+    version: 0.1.7
+  - apiVersion: v2
     appVersion: v1.0.9
     created: "2023-08-28T21:26:45.395879459Z"
     description: A Helm chart for the DIBBs Validation Service
@@ -597,4 +690,4 @@ entries:
     urls:
     - https://github.com/CDCgov/phdi-charts/releases/download/validation-chart-0.1.0/validation-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2023-10-27T23:19:44.847240537Z"
+generated: "2023-10-31T19:51:22.822470544Z"

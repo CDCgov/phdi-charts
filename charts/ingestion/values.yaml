@@ -12,3 +12,8 @@ service:
 # These will need to be replaced by the equivalent Azure Key Vault values
 smartyAuthId: "$token"
 smartyToken: "$password"
+
+name: "ingestion"
+appName: "ingestion-app"
+secretName: "ingestion-secrets"
+serviceName: "ingestion-service"

@@ -1,38 +1,39 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}-alerts-app
-  labels:
-    app: alerts-app
+    name: '{{.Release.Name}}-{{.Values.appName}}'
+    labels:
+        app: {{.Values.appName}}
 spec:
-  replicas: {{ .Values.replicaCount }}
-  selector:
-    matchLabels:
-      app: alerts-app
-  template:
-    metadata:
-      annotations:
-      labels:
-        app: alerts-app
-    spec:
-      imagePullSecrets:
-      containers:
-        - name: {{ .Chart.Name }}
-          image: ghcr.io/cdcgov/phdi/alerts:{{ .Values.image.tag }}
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
-          ports:
-            - name: {{ .Chart.Name }}
-              containerPort: {{ .Values.service.port }}
-          env:
-            - name: TEAMS_WEBHOOK_URL
-              valueFrom:
-                secretKeyRef:
-                  name: {{.Release.Name}}-alerts-secrets
-                  key: webhook-url
-            - name: COMMUNICATION_SERVICE_NAME
-              value: {{.Values.communicationServiceName}}
-            - name: SLACK_BOT_TOKEN
-              valueFrom:
-                secretKeyRef:
-                  name: {{.Release.Name}}-alerts-secrets
-                  key: slack-bot-token
+    replicas: {{.Values.replicaCount}}
+    selector:
+        matchLabels:
+            app: {{.Values.appName}}
+    template:
+        metadata:
+            annotations:
+            labels:
+                app: {{.Values.appName}}
+        spec:
+            imagePullSecrets:
+            containers:
+                - name: {{.Chart.Name}}
+                  image: ghcr.io/cdcgov/phdi/alerts:{{ .Values.image.tag }}
+                  imagePullPolicy: {{.Values.image.pullPolicy}}
+                  ports:
+                      - name: {{.Chart.Name}}
+                        containerPort: {{.Values.service.port}}
+                  env:
+                      - name: TEAMS_WEBHOOK_URL
+                        valueFrom:
+                            secretKeyRef:
+                                name: '{{.Release.Name}}-{{.Values.secretName}}'
+                                key: webhook-url
+                      - name: COMMUNICATION_SERVICE_NAME
+                        value: {{.Values.communicationServiceName}}
+                      - name: SLACK_BOT_TOKEN
+                        valueFrom:
+                            secretKeyRef:
+                                name: '{{.Release.Name}}-{{.Values.secretName}}'
+                                key: slack-bot-token

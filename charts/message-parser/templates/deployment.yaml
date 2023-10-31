@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}-message-parser-app
+  name: "{{.Release.Name}}-{{.Values.appName}}"
   labels:
-    app: message-parser-app
+    app: {{.Values.appName}}
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: {{.Values.replicaCount}}
   selector:
     matchLabels:
-      app: message-parser-app
+      app: {{.Values.appName}}
   template:
     metadata:
       annotations:
       labels:
-        app: message-parser-app
+        app: {{.Values.appName}}
     spec:
       imagePullSecrets:
       containers:
-        - name: {{ .Chart.Name }}
+        - name: {{.Chart.Name}}
           image: ghcr.io/cdcgov/phdi/message-parser:{{ .Values.image.tag }}
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          imagePullPolicy: {{.Values.image.pullPolicy}}
           ports:
-            - name: {{ .Chart.Name | trunc 14 }}
-              containerPort: {{ .Values.service.port }}
+            - name: {{.Chart.Name | trunc 14}}
+              containerPort: {{.Values.service.port}}

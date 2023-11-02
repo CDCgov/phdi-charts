@@ -389,6 +389,16 @@ entries:
   orchestration:
   - apiVersion: v2
     appVersion: 1.1.1
+    created: "2023-11-02T20:30:55.00401247Z"
+    description: A Helm chart for Kubernetes
+    digest: 475afc857e990737eb7ead2297ea73ec3bfc34843a775f289cf77c1abf8e1c8b
+    name: orchestration
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/orchestration-0.1.8/orchestration-0.1.8.tgz
+    version: 0.1.8
+  - apiVersion: v2
+    appVersion: 1.1.1
     created: "2023-10-31T19:51:22.244765873Z"
     description: A Helm chart for Kubernetes
     digest: 9e54cd0906021c4ab7826184a43a9a2fb7aea3a31db20f08def1fbb6955379f8
@@ -690,4 +700,4 @@ entries:
     urls:
     - https://github.com/CDCgov/phdi-charts/releases/download/validation-chart-0.1.0/validation-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2023-10-31T19:51:22.822470544Z"
+generated: "2023-11-02T20:30:55.00442257Z"

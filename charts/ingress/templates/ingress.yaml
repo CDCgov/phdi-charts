@@ -20,55 +20,55 @@ spec:
                     pathType: Prefix
                     backend:
                         service:
-                            name: ingestion-service
+                            name: '{{.Release.Name}}-ingestion-service'
                             port:
                                 number: 8080
                   - path: /alerts/*
                     pathType: Prefix
                     backend:
                         service:
-                            name: alerts-service
+                            name: '{{.Release.Name}}-alerts-service'
                             port:
                                 number: 8080
                   - path: /fhir-converter/*
                     pathType: Prefix
                     backend:
                         service:
-                            name: fhir-converter-service
+                            name: '{{.Release.Name}}-fhir-converter-service'
                             port:
                                 number: 8080
                   - path: /message-parser/*
                     pathType: Prefix
                     backend:
                         service:
-                            name: message-parser-service
+                            name: '{{.Release.Name}}-message-parser-service'
                             port:
                                 number: 8080
                   - path: /record-linkage/*
                     pathType: Prefix
                     backend:
                         service:
-                            name: record-linkage-service
+                            name: '{{.Release.Name}}-record-linkage-service'
                             port:
                                 number: 8080
                   - path: /tabulation/*
                     pathType: Prefix
                     backend:
                         service:
-                            name: tabulation-service
+                            name: '{{.Release.Name}}-tabulation-service'
                             port:
                                 number: 8080
                   - path: /validation/*
                     pathType: Prefix
                     backend:
                         service:
-                            name: validation-service
+                            name: '{{.Release.Name}}-validation-service'
                             port:
                                 number: 8080
                   - path: /orchestration/*
                     pathType: Prefix
                     backend:
                         service:
-                            name: orchestration-service
+                            name: '{{.Release.Name}}-orchestration-service'
                             port:
                                 number: 8080

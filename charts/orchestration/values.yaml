@@ -9,11 +9,11 @@ image:
 service:
     port: 8080
 
-alerts-url: $alertsUrl
-fhir-converter-url: $fhirConverterUrl
-ingestion-url: $ingestionUrl
-ingress-url: $ingressUrl
-message-parser-url: $messageParserUrl
-record-linkage-url: $recordLinkageUrl
-tabulation-url: $tabulationUrl
-validation-url: $validationUrl
+alertsUrl: $alertsUrl
+fhirConverterUrl: $fhirConverterUrl
+ingestionUrl: $ingestionUrl
+ingressUrl: $ingressUrl
+messageParserUrl: $messageParserUrl
+recordLinkageUrl: $recordLinkageUrl
+tabulationUrl: $tabulationUrl
+validationUrl: $validationUrl

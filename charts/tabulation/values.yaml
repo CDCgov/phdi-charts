@@ -10,3 +10,6 @@ service:
 
 fhirUrl: "$fhirurl"
 credManager: "azure"
+
+appName: "tabulation-app"
+serviceName: "tabulation-service"

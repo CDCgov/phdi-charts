@@ -11,3 +11,8 @@ service:
 webhookUrl: "$webhookUrl"
 slackBotToken: "$slackBotToken"
 communicationServiceName: "$commServiceName"
+
+name: "alerts"
+appName: "alerts-app"
+secretName: "alerts-secrets"
+serviceName: "alerts-service"

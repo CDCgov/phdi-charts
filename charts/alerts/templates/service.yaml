@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: alerts-service
+  name: "{{.Release.Name}}-{{.Values.serviceName}}"
 spec:
   type: ClusterIP
   ports:
-    - port: {{ .Values.service.port }}
+    - port: {{.Values.service.port}}
       targetPort: 8080
       protocol: TCP
   selector:
-    app: alerts-app
+    app: {{.Values.appName}}

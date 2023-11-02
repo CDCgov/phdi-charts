@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}-validation-app
+  name: "{{.Release.Name}}-{{.Values.appName}}"
   labels:
-    app: validation-app
+    app: {{.Values.appName}}
 spec:
-  replicas: {{ .Values.replicaCount }}
+  replicas: {{.Values.replicaCount}}
   selector:
     matchLabels:
-      app: validation-app
+      app: {{.Values.appName}}
   template:
     metadata:
       annotations:
       labels:
-        app: validation-app
+        app: {{.Values.appName}}
     spec:
       imagePullSecrets:
       containers:
-        - name: {{ .Chart.Name }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
+        - name: {{.Chart.Name}}
+          image: "{{.Values.image.repository}}:{{.Values.image.tag | default .Chart.AppVersion}}"
+          imagePullPolicy: {{.Values.image.pullPolicy}}
           ports:
-            - name: {{ .Chart.Name | trunc 15 }}
-              containerPort: {{ .Values.service.port }}
+            - name: {{.Chart.Name | trunc 15}}
+              containerPort: {{.Values.service.port}}

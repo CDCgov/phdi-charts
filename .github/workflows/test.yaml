@@ -9,7 +9,6 @@ on:
     push:
         branches:
             - main
-
 jobs:
     lint:
         runs-on: ubuntu-latest
@@ -21,3 +20,32 @@ jobs:
 
             - name: Lint YAML files
               run: yamllint -c yaml_lint_configuration.yaml .
+    unittests:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+            - name: Setup kubectl
+              uses: azure/setup-kubectl@v1
+              with:
+                  version: v1.20.0
+
+            - name: Setup Helm
+              uses: azure/setup-helm@v1
+              with:
+                  version: v3.4.0
+
+            - uses: actions/setup-python@v4
+              with:
+                  python-version: '3.9'
+                  check-latest: true
+
+            - name: Set up chart-testing
+              uses: helm/chart-testing-action@v2.6.0
+
+            - name: Create kind cluster
+              uses: helm/kind-action@v1.7.0
+
+            - name: Upgrade and Test All Charts
+              run: ct install --all --target-branch ${{ github.event.repository.default_branch}}

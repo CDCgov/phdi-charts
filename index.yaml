@@ -257,6 +257,16 @@ entries:
   ingress-chart:
   - apiVersion: v2
     appVersion: 1.1.1
+    created: "2023-11-09T18:33:43.121692255Z"
+    description: A Helm chart for Kubernetes
+    digest: 62a7f3d638ef00b937257cff815f06ffeb81df7641dc835aa3ee0476d1221868
+    name: ingress-chart
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/ingress-chart-0.1.10/ingress-chart-0.1.10.tgz
+    version: 0.1.10
+  - apiVersion: v2
+    appVersion: 1.1.1
     created: "2023-10-31T19:51:21.874632534Z"
     description: A Helm chart for Kubernetes
     digest: fe32e729860b35f43aba406aa2316adf0337c807942890fa8920c6243ebdc549
@@ -387,6 +397,16 @@ entries:
     - https://github.com/CDCgov/phdi-charts/releases/download/message-parser-chart-0.1.0/message-parser-chart-0.1.0.tgz
     version: 0.1.0
   orchestration:
+  - apiVersion: v2
+    appVersion: 1.1.1
+    created: "2023-11-09T18:33:43.266344349Z"
+    description: A Helm chart for Kubernetes
+    digest: b3204cab49a4c12587f276c8a7c77455c02bbb1793bb3d086bbc8c2299a47943
+    name: orchestration
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/orchestration-0.1.9/orchestration-0.1.9.tgz
+    version: 0.1.9
   - apiVersion: v2
     appVersion: 1.1.1
     created: "2023-11-02T20:30:55.00401247Z"
@@ -700,4 +720,4 @@ entries:
     urls:
     - https://github.com/CDCgov/phdi-charts/releases/download/validation-chart-0.1.0/validation-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2023-11-02T20:30:55.00442257Z"
+generated: "2023-11-09T18:33:43.266479451Z"

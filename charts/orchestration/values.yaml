@@ -9,6 +9,10 @@ image:
 service:
     port: 8080
 
+name: "orchestration"
+appName: "orchestration-app"
+serviceName: "orchestration-service"
+
 alertsUrl: $alertsUrl
 fhirConverterUrl: $fhirConverterUrl
 ingestionUrl: $ingestionUrl

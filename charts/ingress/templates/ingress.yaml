@@ -10,65 +10,65 @@ metadata:
 spec:
     tls:
         - hosts:
-              - {{.Values.ingressHostname}}
+              - {{.Values.ingressHostname }}
           secretName: phdi-playground-issuer-account-key
     rules:
-        - host: {{.Values.ingressHostname}}
+        - host: {{.Values.ingressHostname }}
           http:
               paths:
                   - path: /ingestion/*
                     pathType: Prefix
                     backend:
                         service:
-                            name: ingestion-service
+                            name: {{.Values.ingestionServiceName }}
                             port:
                                 number: 8080
                   - path: /alerts/*
                     pathType: Prefix
                     backend:
                         service:
-                            name: alerts-service
+                            name: {{.Values.alertsServiceName }}
                             port:
                                 number: 8080
                   - path: /fhir-converter/*
                     pathType: Prefix
                     backend:
                         service:
-                            name: fhir-converter-service
+                            name: {{.Values.fhirConverterServiceName}}
                             port:
                                 number: 8080
                   - path: /message-parser/*
                     pathType: Prefix
                     backend:
                         service:
-                            name: message-parser-service
+                            name: {{.Values.messageParserServiceName }}
                             port:
                                 number: 8080
                   - path: /record-linkage/*
                     pathType: Prefix
                     backend:
                         service:
-                            name: record-linkage-service
+                            name: {{.Values.recordLinkageServiceName }}
                             port:
                                 number: 8080
                   - path: /tabulation/*
                     pathType: Prefix
                     backend:
                         service:
-                            name: tabulation-service
+                            name: {{.Values.tabulationServiceName }}
                             port:
                                 number: 8080
                   - path: /validation/*
                     pathType: Prefix
                     backend:
                         service:
-                            name: validation-service
+                            name: {{.Values.validationServiceName }}
                             port:
                                 number: 8080
                   - path: /orchestration/*
                     pathType: Prefix
                     backend:
                         service:
-                            name: orchestration-service
+                            name: {{.Values.orchestrationServiceName }}
                             port:
                                 number: 8080

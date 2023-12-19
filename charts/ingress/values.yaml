@@ -1,2 +1,11 @@
 ---
 ingressHostname: sample.hostname
+
+ingestionServiceName: ingestion-service
+alertsServiceName: alerts-service
+fhirConverterServiceName: fhir-converter-service
+messageParserServiceName: message-parser-service
+recordLinkageServiceName: record-linkage-service
+tabulationServiceName: tabulation-service
+validationServiceName: validation-service
+orchestrationServiceName: orchestration-service

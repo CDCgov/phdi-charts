@@ -6,8 +6,8 @@ metadata:
 spec:
   type: ClusterIP
   ports:
-    - port: {{.Values.service.port}}
+    - port: { { .Values.service.port } }
       targetPort: 8080
       protocol: TCP
   selector:
-    app: {{.Values.appName}}
+    app: { { .Values.appName } }

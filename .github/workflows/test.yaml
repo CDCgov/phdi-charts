@@ -1,51 +1,51 @@
 ---
 name: Test
 on:
-    workflow_call:
-    workflow_dispatch:
-    pull_request:
-        branches:
-            - '**'
-    push:
-        branches:
-            - main
+  workflow_call:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - "**"
+  push:
+    branches:
+      - main
 jobs:
-    lint:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v3
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
 
-            - name: Install yamllint
-              run: pip install yamllint
+      - name: Install yamllint
+        run: pip install yamllint
 
-            - name: Lint YAML files
-              run: yamllint -c yaml_lint_configuration.yaml .
-    unittests:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout code
-              uses: actions/checkout@v2
+      - name: Lint YAML files
+        run: yamllint -c yaml_lint_configuration.yaml .
+  unittests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-            - name: Setup kubectl
-              uses: azure/setup-kubectl@v3
-              with:
-                  version: v1.20.0
+      - name: Setup kubectl
+        uses: azure/setup-kubectl@v3
+        with:
+          version: v1.20.0
 
-            - name: Setup Helm
-              uses: azure/setup-helm@v1
-              with:
-                  version: v3.4.0
+      - name: Setup Helm
+        uses: azure/setup-helm@v1
+        with:
+          version: v3.4.0
 
-            - uses: actions/setup-python@v4
-              with:
-                  python-version: '3.9'
-                  check-latest: true
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+          check-latest: true
 
-            - name: Set up chart-testing
-              uses: helm/chart-testing-action@v2.6.0
+      - name: Set up chart-testing
+        uses: helm/chart-testing-action@v2.6.0
 
-            - name: Create kind cluster
-              uses: helm/kind-action@v1.7.0
+      - name: Create kind cluster
+        uses: helm/kind-action@v1.7.0
 
-            - name: Upgrade and Test All Charts
-              run: ct install --all --target-branch ${{ github.event.repository.default_branch}}
+      - name: Upgrade and Test All Charts
+        run: ct install --all --target-branch ${{ github.event.repository.default_branch}}

@@ -11,7 +11,6 @@ spec:
     - name: wget
       image: busybox
       command: ["wget"]
-      args: [
-        "{{.Release.Name}}-{{.Values.serviceName}}:{{ .Values.service.port}}"
-      ]
+      args:
+        ["{{.Release.Name}}-{{.Values.serviceName}}:{{ .Values.service.port}}"]
   restartPolicy: Never

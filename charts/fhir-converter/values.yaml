@@ -2,12 +2,12 @@
 replicaCount: 1
 
 image:
-    repository: ghcr.io/cdcgov/phdi/fhir-converter
-    pullPolicy: IfNotPresent
-    tag: v1.0.7
+  repository: ghcr.io/cdcgov/phdi/fhir-converter
+  pullPolicy: IfNotPresent
+  tag: v1.0.7
 
 service:
-    port: 8080
+  port: 8080
 
 name: fhir-converter
 appName: fhir-converter-app

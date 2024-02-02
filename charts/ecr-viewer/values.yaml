@@ -1,0 +1,18 @@
+replicaCount: 1
+
+image:
+  repository: ghcr.io/cdcgov/phdi/ecr-viewer
+  pullPolicy: IfNotPresent
+  tag: "v1.1.10"
+
+service:
+  port: 8080
+
+# Will not work as written.
+# These will need to be replaced by the equivalent secret values
+databaseUrl: "$database-connection-string"
+
+name: "ecr-viewer"
+appName: "ecr-viewer-app"
+secretName: "ecr-viewer-secrets"
+serviceName: "ecr-viewer-service"

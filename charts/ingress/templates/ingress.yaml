@@ -10,65 +10,72 @@ metadata:
 spec:
     tls:
         - hosts:
-              - {{.Values.ingressHostname }}
+              - {{.Values.ingressHostname: null}: null}
           secretName: phdi-playground-issuer-account-key
     rules:
-        - host: {{.Values.ingressHostname }}
+        - host: {{.Values.ingressHostname: null}: null}
           http:
               paths:
                   - path: /ingestion/*
                     pathType: Prefix
                     backend:
                         service:
-                            name: {{.Values.ingestionServiceName }}
+                            name: {{.Values.ingestionServiceName: null}: null}
                             port:
                                 number: 8080
                   - path: /alerts/*
                     pathType: Prefix
                     backend:
                         service:
-                            name: {{.Values.alertsServiceName }}
+                            name: {{.Values.alertsServiceName: null}: null}
                             port:
                                 number: 8080
                   - path: /fhir-converter/*
                     pathType: Prefix
                     backend:
                         service:
-                            name: {{.Values.fhirConverterServiceName}}
+                            name: {{.Values.fhirConverterServiceName: null}: null}
                             port:
                                 number: 8080
                   - path: /message-parser/*
                     pathType: Prefix
                     backend:
                         service:
-                            name: {{.Values.messageParserServiceName }}
+                            name: {{.Values.messageParserServiceName: null}: null}
                             port:
                                 number: 8080
                   - path: /record-linkage/*
                     pathType: Prefix
                     backend:
                         service:
-                            name: {{.Values.recordLinkageServiceName }}
+                            name: {{.Values.recordLinkageServiceName: null}: null}
                             port:
                                 number: 8080
                   - path: /tabulation/*
                     pathType: Prefix
                     backend:
                         service:
-                            name: {{.Values.tabulationServiceName }}
+                            name: {{.Values.tabulationServiceName: null}: null}
                             port:
                                 number: 8080
                   - path: /validation/*
                     pathType: Prefix
                     backend:
                         service:
-                            name: {{.Values.validationServiceName }}
+                            name: {{.Values.validationServiceName: null}: null}
                             port:
                                 number: 8080
                   - path: /orchestration/*
                     pathType: Prefix
                     backend:
                         service:
-                            name: {{.Values.orchestrationServiceName }}
+                            name: {{.Values.orchestrationServiceName: null}: null}
+                            port:
+                                number: 8080
+                  - path: /ecr-viewer/*
+                    pathType: Prefix
+                    backend:
+                        service:
+                            name: {{.Values.ecrViewerServiceName: null}: null}
                             port:
                                 number: 8080

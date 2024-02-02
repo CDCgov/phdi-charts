@@ -9,3 +9,4 @@ recordLinkageServiceName: record-linkage-service
 tabulationServiceName: tabulation-service
 validationServiceName: validation-service
 orchestrationServiceName: orchestration-service
+ecrViewerServiceName: ecr-viewer-service

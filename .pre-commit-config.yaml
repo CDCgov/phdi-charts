@@ -14,19 +14,14 @@ repos:
       - id: pretty-format-json
         args: [--autofix, --no-sort-keys]
         exclude: .*valid.*
-  - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v4.0.0-alpha.8
+  - repo: https://github.com/jumanjihouse/pre-commit-hook-yamlfmt
+    rev: 0.2.3
     hooks:
-      - id: prettier
-        types_or: [yaml]
-  # - repo: https://github.com/jumanjihouse/pre-commit-hook-yamlfmt
-  #   rev: 0.2.3
-  #   hooks:
-  #       - id: yamlfmt
-  #         args: [--width, '80']
-  # - repo: https://github.com/adrienverge/yamllint.git
-  #   rev: v1.32.0
-  #   hooks:
-  #       - id: yamllint
-  #         args: [-d relaxed]
-  #         exclude: .*/templates
+        - id: yamlfmt
+          args: [--width, '80']
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.32.0
+    hooks:
+        - id: yamllint
+          args: [-d relaxed]
+          exclude: .*/templates

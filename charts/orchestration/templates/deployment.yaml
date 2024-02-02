@@ -6,7 +6,7 @@ metadata:
   labels:
     app: orchestration-app
 spec:
-  replicas: {{.Values.replicaCount}}
+  replicas: { { .Values.replicaCount } }
   selector:
     matchLabels:
       app: orchestration-app
@@ -18,12 +18,12 @@ spec:
     spec:
       imagePullSecrets:
       containers:
-        - name: {{.Chart.Name}}
+        - name: { { .Chart.Name } }
           image: ghcr.io/cdcgov/phdi/orchestration:{{ .Values.image.tag }}
-          imagePullPolicy: {{.Values.image.pullPolicy}}
+          imagePullPolicy: { { .Values.image.pullPolicy } }
           ports:
-            - name: {{.Chart.Name | trunc 14}}
-              containerPort: {{.Values.service.port}}
+            - name: { { .Chart.Name | trunc 14 } }
+              containerPort: { { .Values.service.port } }
           env:
             - name: ALERTS_URL
               valueFrom:

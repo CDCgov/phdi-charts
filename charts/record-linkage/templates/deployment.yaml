@@ -2,24 +2,24 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: {{.Values.appName}}
+    app: { { .Values.appName } }
   name: "{{.Release.Name}}-{{.Values.appName}}"
 spec:
-  replicas: {{.Values.replicaCount}}
+  replicas: { { .Values.replicaCount } }
   selector:
     matchLabels:
-      app: {{.Values.appName}}
+      app: { { .Values.appName } }
   template:
     metadata:
       labels:
-        app: {{.Values.appName}}
+        app: { { .Values.appName } }
     spec:
       containers:
-        - name: {{.Chart.Name}}
+        - name: { { .Chart.Name } }
           image: "ghcr.io/cdcgov/phdi/record-linkage:{{.Values.image.tag}}"
           ports:
-            - name: {{.Chart.Name}}
-              containerPort: {{.Values.service.port}}
+            - name: { { .Chart.Name } }
+              containerPort: { { .Values.service.port } }
           env:
             - name: MPI_DB_TYPE
               valueFrom:

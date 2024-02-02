@@ -3,23 +3,23 @@ kind: Deployment
 metadata:
   name: "{{.Release.Name}}-{{.Values.appName}}"
   labels:
-    app: {{.Values.appName}}
+    app: { { .Values.appName } }
 spec:
-  replicas: {{.Values.replicaCount}}
+  replicas: { { .Values.replicaCount } }
   selector:
     matchLabels:
-      app: {{.Values.appName}}
+      app: { { .Values.appName } }
   template:
     metadata:
       annotations:
       labels:
-        app: {{.Values.appName}}
+        app: { { .Values.appName } }
     spec:
       imagePullSecrets:
       containers:
-        - name: {{.Chart.Name}}
+        - name: { { .Chart.Name } }
           image: ghcr.io/cdcgov/phdi/fhir-converter:{{ .Values.image.tag }}
-          imagePullPolicy: {{.Values.image.pullPolicy}}
+          imagePullPolicy: { { .Values.image.pullPolicy } }
           ports:
-            - name: {{.Chart.Name | trunc 14}}
-              containerPort: {{.Values.service.port}}
+            - name: { { .Chart.Name | trunc 14 } }
+              containerPort: { { .Values.service.port } }

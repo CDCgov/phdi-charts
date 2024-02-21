@@ -34,7 +34,7 @@ spec:
                     pathType: Prefix
                     backend:
                         service:
-                            name: {{.Values.fhirConverterServiceName}}
+                            name: {{.Values.fhirConverterServiceName }}
                             port:
                                 number: 8080
                   - path: /message-parser/*
@@ -70,5 +70,12 @@ spec:
                     backend:
                         service:
                             name: {{.Values.orchestrationServiceName }}
+                            port:
+                                number: 8080
+                  - path: /ecr-viewer/*
+                    pathType: Prefix
+                    backend:
+                        service:
+                            name: {{.Values.ecrViewerServiceName }}
                             port:
                                 number: 8080

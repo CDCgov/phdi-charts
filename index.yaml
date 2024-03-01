@@ -92,6 +92,17 @@ entries:
     urls:
     - https://github.com/CDCgov/phdi-charts/releases/download/ecr-viewer-0.1.0/ecr-viewer-0.1.0.tgz
     version: 0.1.0
+  ecr-viewer-chart:
+  - apiVersion: v2
+    appVersion: "1.2"
+    created: "2024-03-01T17:37:09.061275964Z"
+    description: A Helm chart for the DIBBs eCR Viewer
+    digest: c39ce04dea35f9ce9fb7314591dc88fb73c2eba7e3588af0f61136932e4b5ccf
+    name: ecr-viewer-chart
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/ecr-viewer-chart-0.1.0/ecr-viewer-chart-0.1.0.tgz
+    version: 0.1.0
   fhir-converter:
   - apiVersion: v2
     appVersion: 1.16.0
@@ -450,6 +461,16 @@ entries:
     version: 0.1.6
   orchestration-chart:
   - apiVersion: v2
+    appVersion: "1.2"
+    created: "2024-03-01T17:37:10.007401485Z"
+    description: A Helm chart for Kubernetes
+    digest: 91f4cdc2a7c64335d23f0b0770333fcb60b731c33e6fb20c8d6745ad337a601d
+    name: orchestration-chart
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/orchestration-chart-0.1.9/orchestration-chart-0.1.9.tgz
+    version: 0.1.9
+  - apiVersion: v2
     appVersion: 1.16.0
     created: "2023-10-16T17:02:59.06850741Z"
     description: A Helm chart for Kubernetes
@@ -731,4 +752,4 @@ entries:
     urls:
     - https://github.com/CDCgov/phdi-charts/releases/download/validation-chart-0.1.0/validation-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2024-02-21T23:45:37.530622991Z"
+generated: "2024-03-01T17:37:10.662138406Z"

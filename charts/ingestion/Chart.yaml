@@ -4,4 +4,4 @@ name: ingestion-chart
 description: A Helm chart for the DIBBs ingestion service
 type: application
 version: 0.1.7
-appVersion: 1.1.1
+appVersion: 1.2

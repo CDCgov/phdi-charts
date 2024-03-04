@@ -2,10 +2,9 @@
 replicaCount: 1
 
 image:
-    repository: ghcr.io/cdcgov/phdi/record-linkage
+    repository: nginx
     pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
-    tag: v1.2.1
+    tag: 1.25.4
 
 service:
     port: 80

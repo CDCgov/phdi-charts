@@ -2,7 +2,7 @@
 replicaCount: 1
 
 image:
-    repository: nginx
+    repository: record-linkage
     pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
     tag: v1.2.1

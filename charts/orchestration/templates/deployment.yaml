@@ -16,6 +16,7 @@ spec:
       labels:
         app: orchestration-app
     spec:
+      serviceAccountName: orchestration
       imagePullSecrets:
       containers:
         - name: {{.Chart.Name}}

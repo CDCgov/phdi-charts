@@ -15,6 +15,7 @@ spec:
       labels:
         app: {{.Values.appName}}
     spec:
+      serviceAccountName: ecr-viewer
       imagePullSecrets:
       containers:
         - name: {{.Chart.Name}}

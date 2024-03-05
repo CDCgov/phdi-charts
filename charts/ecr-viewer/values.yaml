@@ -17,4 +17,4 @@ name: ecr-viewer
 appName: ecr-viewer-app
 secretName: ecr-viewer-secrets
 serviceName: ecr-viewer-service
-serviceAccountRoleArn: ecr-viewer-s3-role-arn
+ecrViewerS3RoleArn: placeholder-arn

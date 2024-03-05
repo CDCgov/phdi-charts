@@ -2,9 +2,9 @@
 replicaCount: 1
 
 image:
-    repository: nginx
+    repository: ngnix
     pullPolicy: IfNotPresent
-    tag: 1.25.4
+    tag: v1.0.9
 
 service:
     port: 80

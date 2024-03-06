@@ -61,3 +61,8 @@ spec:
                 secretKeyRef:
                   name: "{{.Release.Name}}-orchestration-secrets"
                   key: validation-url
+            - name: ECR_BUCKET_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: "{{.Release.Name}}-orchestration-secrets"
+                  key: ecr-bucket-name

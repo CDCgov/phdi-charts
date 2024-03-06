@@ -22,4 +22,4 @@ recordLinkageUrl: $recordLinkageUrl
 tabulationUrl: $tabulationUrl
 validationUrl: $validationUrl
 orchestrationS3RoleArn: placeholder-arn
-
+ecrBucketName: $ecrBucketName

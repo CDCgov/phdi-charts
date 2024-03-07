@@ -20,4 +20,4 @@ serviceName: ecr-viewer-service
 ecrViewerS3RoleArn: placeholder-arn
 nbsPubKey: placeholder-key
 ecrBucketName: placeholder-bucket
-nextPublicSource: placeholder-next
+source: placeholder-source

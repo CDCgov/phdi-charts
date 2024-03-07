@@ -40,8 +40,8 @@ spec:
                 secretKeyRef:
                   name: "{{.Release.Name}}-{{.Values.secretName}}"
                   key: ecr-bucket-name
-            - name: NEXT_PUBLIC_SOURCE
+            - name: SOURCE
               valueFrom:
                 secretKeyRef:
                   name: "{{.Release.Name}}-{{.Values.secretName}}"
-                  key: next-public-source
+                  key: source

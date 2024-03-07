@@ -35,3 +35,13 @@ spec:
                 secretKeyRef:
                   name: "{{.Release.Name}}-{{.Values.secretName}}"
                   key: nbs-pub-key
+            - name: ECR_BUCKET_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: "{{.Release.Name}}-{{.Values.secretName}}"
+                  key: ecr-bucket-name
+            - name: NEXT_PUBLIC_SOURCE
+              valueFrom:
+                secretKeyRef:
+                  name: "{{.Release.Name}}-{{.Values.secretName}}"
+                  key: next-public-source

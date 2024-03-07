@@ -18,3 +18,4 @@ appName: ecr-viewer-app
 secretName: ecr-viewer-secrets
 serviceName: ecr-viewer-service
 ecrViewerS3RoleArn: placeholder-arn
+nbsPubKey: placeholder-key

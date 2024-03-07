@@ -30,3 +30,8 @@ spec:
                 secretKeyRef:
                   name: "{{.Release.Name}}-{{.Values.secretName}}"
                   key: database-url
+            - name: NBS_PUB_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: "{{.Release.Name}}-{{.Values.secretName}}"
+                  key: nbs-pub-key

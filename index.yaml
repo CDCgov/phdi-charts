@@ -83,6 +83,15 @@ entries:
     version: 0.1.0
   ecr-viewer:
   - apiVersion: v2
+    created: "2024-03-07T20:12:11.370404017Z"
+    description: A Helm chart for the DIBBs eCR Viewer
+    digest: 87db023bdc80627c8602607f996c10becf1ae3c6f0a6e7d34493cdf8931ae97b
+    name: ecr-viewer
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/ecr-viewer-0.1.5/ecr-viewer-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v2
     created: "2024-03-07T18:43:10.031314477Z"
     description: A Helm chart for the DIBBs eCR Viewer
     digest: fbc941e79933893b583007c3a98083f8db8cca077175dbe0701f482cc450b9ec
@@ -815,4 +824,4 @@ entries:
     urls:
     - https://github.com/CDCgov/phdi-charts/releases/download/validation-chart-0.1.0/validation-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2024-03-07T18:43:10.031474095Z"
+generated: "2024-03-07T20:12:11.37056548Z"

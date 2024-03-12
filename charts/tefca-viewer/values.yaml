@@ -3,7 +3,7 @@ replicaCount: 1
 
 image:
     repository: ghcr.io/cdcgov/phdi/tefca-viewer
-    pullPolicy: Never
+    pullPolicy: IfNotPresent
     tag: v1.2.7
 
 service:

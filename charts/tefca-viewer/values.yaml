@@ -1,6 +1,11 @@
 ---
 replicaCount: 1
 
+image:
+    repository: ghcr.io/cdcgov/phdi/tefca-viewer
+    pullPolicy: Never
+    tag: v1.2.1
+
 service:
     port: 8080
 

@@ -19,7 +19,7 @@ spec:
       imagePullSecrets:
       containers:
         - name: {{.Chart.Name}}
-          image: ghcr.io/cdcgov/phdi/ecr-viewer:{{ .Values.image.tag }}
+          image: ghcr.io/cdcgov/phdi/{{.Values.name}}:{{ .Values.image.tag }}
           imagePullPolicy: {{.Values.image.pullPolicy}}
           ports:
             - name: {{.Chart.Name}}

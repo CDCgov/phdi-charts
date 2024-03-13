@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: {{.Chart.Name}}
-          image: "ghcr.io/cdcgov/phdi/record-linkage:{{.Values.image.tag}}"
+          image: "ghcr.io/cdcgov/phdi/{{.Values.name}}:{{.Values.image.tag}}"
           ports:
             - name: {{.Chart.Name}}
               containerPort: {{.Values.service.port}}

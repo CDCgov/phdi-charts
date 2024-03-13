@@ -20,5 +20,6 @@ databasePort: '5432'
 patientTable: patient
 personTable: person
 
+name: record-linkage
 appName: record-linkage-app
 serviceName: record-linkage-service

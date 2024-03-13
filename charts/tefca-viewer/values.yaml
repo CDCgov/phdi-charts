@@ -1,0 +1,14 @@
+---
+replicaCount: 1
+
+image:
+    repository: ghcr.io/cdcgov/phdi/tefca-viewer
+    pullPolicy: IfNotPresent
+    tag: v1.2.7
+
+service:
+    port: 8080
+
+name: tefca-viewer
+appName: tefca-viewer-app
+serviceName: tefca-viewer-service

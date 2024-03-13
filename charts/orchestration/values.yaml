@@ -21,5 +21,4 @@ messageParserUrl: $messageParserUrl
 recordLinkageUrl: $recordLinkageUrl
 tabulationUrl: $tabulationUrl
 validationUrl: $validationUrl
-orchestrationS3RoleArn: placeholder-arn
-ecrBucketName: $ecrBucketName
+ecrViewerUrl: placeholderUrl

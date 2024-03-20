@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
-name: rec-link-chart
+name: record-linkage
 description: A Helm Chart for the DIBBs Record Linkage Service
 type: application
-version: 0.1.8
+version: 0.2.0
 icon: https://commons.wikimedia.org/wiki/File:US_CDC_logo.svg

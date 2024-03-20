@@ -1,7 +1,7 @@
 ---
 apiVersion: v2
-name: validation-chart
+name: validation
 description: A Helm chart for the DIBBs Validation Service
 type: application
-version: 0.1.7
+version: 0.2.0
 icon: https://commons.wikimedia.org/wiki/File:US_CDC_logo.svg

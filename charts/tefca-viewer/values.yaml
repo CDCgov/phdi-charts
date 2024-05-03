@@ -3,11 +3,11 @@ replicaCount: 1
 
 image:
     repository: ghcr.io/cdcgov/phdi/tefca-viewer
-    pullPolicy: IfNotPresent
-    tag: v1.2.7
+    pullPolicy: Always
+    tag: dev
 
 service:
-    port: 8080
+    port: 3000
 
 name: tefca-viewer
 appName: tefca-viewer-app

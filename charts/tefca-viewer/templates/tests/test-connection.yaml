@@ -12,6 +12,6 @@ spec:
       image: busybox
       command: ["wget"]
       args: [
-        "{{.Release.Name}}-{{.Values.serviceName}}:{{ .Values.service.port}}"
+        "{{.Release.Name}}-{{.Values.serviceName}}:{{ .Values.service.port}}/tefca-viewer"
       ]
   restartPolicy: Never

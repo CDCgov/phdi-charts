@@ -9,5 +9,5 @@ service:
   port: 8080
 
 name: "trigger-code-reference"
-appName: "trigger-code-reference-app"
-serviceName: "trigger-code-reference-service"
+appName: "tcr-app"
+serviceName: "tcr-service"

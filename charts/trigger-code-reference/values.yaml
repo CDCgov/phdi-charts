@@ -8,6 +8,6 @@ image:
 service:
   port: 8080
 
-name: "trigger-code-reference"
+name: "tcr"
 appName: "tcr-app"
 serviceName: "tcr-service"

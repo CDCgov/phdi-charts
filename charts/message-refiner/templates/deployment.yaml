@@ -24,8 +24,8 @@ spec:
             - name: {{.Chart.Name | trunc 14}}
               containerPort: {{.Values.service.port}}
           env:
-            - name: TCR_URL
+            - name: TRIGGER_CODE_REFERENCE_URL
               valueFrom:
                 secretKeyRef:
                   name: "{{.Release.Name}}-message-refiner-secrets"
-                  key: tcr-url
+                  key: trigger-code-reference-url

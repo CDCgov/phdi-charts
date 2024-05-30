@@ -11,3 +11,5 @@ service:
 name: "message-refiner"
 appName: "message-refiner-app"
 serviceName: "message-refiner-service"
+
+triggerCodeRefenceUrl: $triggerCodeReferenceUrl

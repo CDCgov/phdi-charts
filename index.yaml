@@ -566,6 +566,16 @@ entries:
     urls:
     - https://github.com/CDCgov/phdi-charts/releases/download/message-parser-chart-0.1.0/message-parser-chart-0.1.0.tgz
     version: 0.1.0
+  message-refiner:
+  - apiVersion: v2
+    created: "2024-05-30T16:43:41.606648699Z"
+    description: A Helm chart for Kubernetes
+    digest: f8292374f80f52e99539468eb578404edd490f6f7904659ce35a7a693f16fb8b
+    name: message-refiner
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/message-refiner-0.2.0/message-refiner-0.2.0.tgz
+    version: 0.2.0
   orchestration:
   - apiVersion: v2
     created: "2024-03-20T18:01:04.141400797Z"
@@ -1052,4 +1062,4 @@ entries:
     urls:
     - https://github.com/CDCgov/phdi-charts/releases/download/validation-chart-0.1.0/validation-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2024-05-30T16:03:20.990642995Z"
+generated: "2024-05-30T16:43:41.606919784Z"

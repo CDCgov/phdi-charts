@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "{{.Release.Name}}-{{.Values.appName}}"
+  labels:
+    app: {{.Values.appName}}
+spec:
+  replicas: {{.Values.replicaCount}}
+  selector:
+    matchLabels:
+      app: {{.Values.appName}}
+  template:
+    metadata:
+      annotations:
+      labels:
+        app: {{.Values.appName}}
+    spec:
+      imagePullSecrets:
+      containers:
+        - name: {{.Chart.Name}}
+          image: ghcr.io/cdcgov/phdi/{{.Values.name}}:{{ .Values.image.tag }}
+          imagePullPolicy: {{.Values.image.pullPolicy}}
+          ports:
+            - name: {{.Chart.Name | trunc 14}}
+              containerPort: {{.Values.service.port}}

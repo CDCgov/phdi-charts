@@ -11,3 +11,5 @@ spec:
       protocol: TCP
   selector:
     app: {{.Values.appName}}
+metadata:
+  name: {{ .Values.serviceName | trunc 63 | trimSuffix "-" }}

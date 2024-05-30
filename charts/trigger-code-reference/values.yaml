@@ -1,0 +1,13 @@
+replicaCount: 1
+
+image:
+  repository: ghcr.io/cdcgov/phdi/trigger-code-reference
+  pullPolicy: IfNotPresent
+  tag: v1.2.1
+
+service:
+  port: 8080
+
+name: "trigger-code-reference"
+appName: "trigger-code-reference-app"
+serviceName: "trigger-code-reference-service"

@@ -931,6 +931,16 @@ entries:
     urls:
     - https://github.com/CDCgov/phdi-charts/releases/download/tefca-viewer-chart-0.1.1/tefca-viewer-chart-0.1.1.tgz
     version: 0.1.1
+  trigger-code-reference:
+  - apiVersion: v2
+    created: "2024-05-30T16:03:20.990354691Z"
+    description: A Helm chart for Kubernetes
+    digest: 7dc8a9af51e761fbed86843effd54d5e0660f0ef81a6fde74c821c7193e88190
+    name: trigger-code-reference
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/trigger-code-reference-0.2.0/trigger-code-reference-0.2.0.tgz
+    version: 0.2.0
   validation:
   - apiVersion: v2
     created: "2024-03-20T18:01:04.660215367Z"
@@ -1042,4 +1052,4 @@ entries:
     urls:
     - https://github.com/CDCgov/phdi-charts/releases/download/validation-chart-0.1.0/validation-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2024-05-03T21:52:57.055238104Z"
+generated: "2024-05-30T16:03:20.990642995Z"

@@ -3,7 +3,7 @@ replicaCount: 1
 image:
   repository: ghcr.io/cdcgov/phdi/message-refiner
   pullPolicy: IfNotPresent
-  tag: v1.4.4
+  tag: latest
 
 service:
   port: 8080

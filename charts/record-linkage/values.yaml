@@ -4,7 +4,7 @@ replicaCount: 1
 image:
     repository: ngnix
     pullPolicy: IfNotPresent
-    tag: v1.0.9
+    tag: latest
 
 service:
     port: 80

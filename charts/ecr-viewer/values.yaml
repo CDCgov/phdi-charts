@@ -4,7 +4,6 @@ replicaCount: 1
 image:
     repository: ghcr.io/cdcgov/phdi/ecr-viewer
     pullPolicy: IfNotPresent
-    dockerTag: latest
 
 service:
     port: 3000

@@ -4,7 +4,6 @@ replicaCount: 1
 image:
     repository: ngnix
     pullPolicy: IfNotPresent
-    dockerTag: latest
 
 service:
     port: 80

@@ -4,7 +4,7 @@ replicaCount: 1
 image:
     repository: ghcr.io/cdcgov/phdi/dibbs-resources
     pullPolicy: Always
-    tag: dev
+    tag: v1.4.1
 
 service:
     port: 3000

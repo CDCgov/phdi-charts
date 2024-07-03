@@ -1,0 +1,14 @@
+---
+replicaCount: 1
+
+image:
+    repository: ghcr.io/cdcgov/phdi/dibbs-resources
+    pullPolicy: Always
+    tag: dev
+
+service:
+    port: 3000
+
+name: dibbs-resources
+appName: dibbs-resources-app
+serviceName: dibbs-resources-service

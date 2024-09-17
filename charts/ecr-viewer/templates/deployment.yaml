@@ -45,3 +45,18 @@ spec:
                 secretKeyRef:
                   name: "{{.Release.Name}}-{{.Values.secretName}}"
                   key: source
+            - name: APP_ENV
+              valueFrom:
+                secretKeyRef:
+                  name: "{{.Release.Name}}-{{.Values.secretName}}"
+                  key: app-env
+            - name: NODE_ENV
+              valueFrom:
+                secretKeyRef:
+                  name: "{{.Release.Name}}-{{.Values.secretName}}"
+                  key: node-env
+            - name: NEXT_PUBLIC_BASEPATH
+              valueFrom:
+                secretKeyRef:
+                  name: "{{.Release.Name}}-{{.Values.secretName}}"
+                  key: next-public-basepath

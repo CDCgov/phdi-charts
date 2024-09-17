@@ -4,7 +4,7 @@ replicaCount: 1
 image:
     repository: ghcr.io/cdcgov/phdi/ecr-viewer
     pullPolicy: IfNotPresent
-    tag: v1.2.1
+    tag: v1.6.4
 
 service:
     port: 3000
@@ -21,3 +21,6 @@ ecrViewerS3RoleArn: placeholder-arn
 nbsPubKey: placeholder-key
 ecrBucketName: placeholder-bucket
 source: placeholder-source
+appEnv: test
+nodeEnv: production
+nextPublicBasepath: /ecr-viewer

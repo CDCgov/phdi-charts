@@ -28,3 +28,5 @@ spec:
               value: {{.Values.fhirUrl}}
             - name: cred_manager
               value: {{.Values.credManager}}
+            - name: database_url
+              value: {{.Values.databaseUrl}}

@@ -12,3 +12,4 @@ service:
 name: tefca-viewer
 appName: tefca-viewer-app
 serviceName: tefca-viewer-service
+databaseUrl: database-url

@@ -102,6 +102,15 @@ entries:
     version: 0.1.0
   ecr-viewer:
   - apiVersion: v2
+    created: "2024-09-18T19:21:31.992903076Z"
+    description: A Helm chart for the DIBBs eCR Viewer
+    digest: b6fc6a2ac00f27319cf56c7b8b706f146bfabef75a57d2e14fd8c1a3ff936c03
+    name: ecr-viewer
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/ecr-viewer-0.2.1/ecr-viewer-0.2.1.tgz
+    version: 0.2.1
+  - apiVersion: v2
     created: "2024-03-20T18:01:03.51085674Z"
     description: A Helm chart for the DIBBs eCR Viewer
     digest: 9eaeff49a9067d9d034dd0aa0c78569a788c2b8e3e7296a04f81099a608e8087
@@ -186,6 +195,15 @@ entries:
     - https://github.com/CDCgov/phdi-charts/releases/download/ecr-viewer-chart-0.1.0/ecr-viewer-chart-0.1.0.tgz
     version: 0.1.0
   fhir-converter:
+  - apiVersion: v2
+    created: "2024-09-18T19:21:32.186411676Z"
+    description: A Helm chart for Kubernetes
+    digest: 74ed83953b452cbb462daa170d4dc7c877388b2a2d9f1d5341608d44f2553c8e
+    name: fhir-converter
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/fhir-converter-0.3.0/fhir-converter-0.3.0.tgz
+    version: 0.3.0
   - apiVersion: v2
     created: "2024-03-20T18:01:03.62671582Z"
     description: A Helm chart for Kubernetes
@@ -296,6 +314,15 @@ entries:
     - https://github.com/CDCgov/phdi-charts/releases/download/fhir-converter-chart-0.1.0/fhir-converter-chart-0.1.0.tgz
     version: 0.1.0
   ingestion:
+  - apiVersion: v2
+    created: "2024-09-18T19:21:32.294891635Z"
+    description: A Helm chart for the DIBBs ingestion service
+    digest: 8fe04fe92707069098589a6afa25cc6a15862f5451964299c8d405689d8cc98d
+    name: ingestion
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/ingestion-0.2.1/ingestion-0.2.1.tgz
+    version: 0.2.1
   - apiVersion: v2
     created: "2024-03-20T18:01:03.783474731Z"
     description: A Helm chart for the DIBBs ingestion service
@@ -468,6 +495,15 @@ entries:
     version: 0.1.5
   message-parser:
   - apiVersion: v2
+    created: "2024-09-18T19:21:32.40733159Z"
+    description: A Helm chart for Kubernetes
+    digest: d2537cd3dffaffc59423b41815f6155af67c76f0140d62359a7711a3a36c0cbe
+    name: message-parser
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/message-parser-0.2.1/message-parser-0.2.1.tgz
+    version: 0.2.1
+  - apiVersion: v2
     created: "2024-03-20T18:01:04.038471076Z"
     description: A Helm chart for Kubernetes
     digest: 60057f4896807cd1544894609c91d6280f45fe094241fde00bed71284574692b
@@ -577,6 +613,15 @@ entries:
     - https://github.com/CDCgov/phdi-charts/releases/download/message-refiner-0.2.0/message-refiner-0.2.0.tgz
     version: 0.2.0
   orchestration:
+  - apiVersion: v2
+    created: "2024-09-18T19:21:32.673351674Z"
+    description: A Helm chart for Kubernetes
+    digest: 7512eecf08988239346ad72db10c7fd783e20dc2f93198580555efb57fa1fb63
+    name: orchestration
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/orchestration-0.2.1/orchestration-0.2.1.tgz
+    version: 0.2.1
   - apiVersion: v2
     created: "2024-03-20T18:01:04.141400797Z"
     description: A Helm chart for Kubernetes
@@ -905,6 +950,15 @@ entries:
     version: 0.1.0
   tefca-viewer:
   - apiVersion: v2
+    created: "2024-09-18T19:21:32.7766578Z"
+    description: A Helm chart for Kubernetes
+    digest: 5456cb0aa0a7ac8dcf079f844a4e7c634c84057beed09df6f5461bdbc4402ebc
+    name: tefca-viewer
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/tefca-viewer-0.4.1/tefca-viewer-0.4.1.tgz
+    version: 0.4.1
+  - apiVersion: v2
     created: "2024-05-03T21:52:57.055059841Z"
     description: A Helm chart for Kubernetes
     digest: 53d68215dd147e95f5dc44e492da03315dda8d6921beac1f473b92b8b4f837d2
@@ -943,6 +997,15 @@ entries:
     version: 0.1.1
   trigger-code-reference:
   - apiVersion: v2
+    created: "2024-09-18T19:21:32.944275199Z"
+    description: A Helm chart for Kubernetes
+    digest: ea9935a24b560fc7647a82e0cce649795e1fc13b883ebeae87755e440885dc46
+    name: trigger-code-reference
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/trigger-code-reference-0.2.1/trigger-code-reference-0.2.1.tgz
+    version: 0.2.1
+  - apiVersion: v2
     created: "2024-05-30T16:03:20.990354691Z"
     description: A Helm chart for Kubernetes
     digest: 7dc8a9af51e761fbed86843effd54d5e0660f0ef81a6fde74c821c7193e88190
@@ -952,6 +1015,16 @@ entries:
     - https://github.com/CDCgov/phdi-charts/releases/download/trigger-code-reference-0.2.0/trigger-code-reference-0.2.0.tgz
     version: 0.2.0
   validation:
+  - apiVersion: v2
+    created: "2024-09-18T19:21:33.051162981Z"
+    description: A Helm chart for the DIBBs Validation Service
+    digest: dd30f24659e76c122dcaa4b2455f75a9290d29ef49de4559542faa23eb2c1abb
+    icon: https://commons.wikimedia.org/wiki/File:US_CDC_logo.svg
+    name: validation
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/validation-0.2.1/validation-0.2.1.tgz
+    version: 0.2.1
   - apiVersion: v2
     created: "2024-03-20T18:01:04.660215367Z"
     description: A Helm chart for the DIBBs Validation Service
@@ -1062,4 +1135,4 @@ entries:
     urls:
     - https://github.com/CDCgov/phdi-charts/releases/download/validation-chart-0.1.0/validation-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2024-05-30T16:43:41.606919784Z"
+generated: "2024-09-18T19:21:33.051435809Z"

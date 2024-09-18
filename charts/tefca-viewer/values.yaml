@@ -12,4 +12,5 @@ service:
 name: tefca-viewer
 appName: tefca-viewer-app
 serviceName: tefca-viewer-service
-databaseUrl: database-url
+jdbcDatabaseConnectionString: jdbc-database-url
+databaseConnectionString: database-url

@@ -4,7 +4,7 @@ replicaCount: 1
 image:
     repository: ghcr.io/cdcgov/phdi/tefca-viewer
     pullPolicy: Always
-    tag: dev
+    tag: v1.6.6
 
 service:
     port: 3000
@@ -12,4 +12,5 @@ service:
 name: tefca-viewer
 appName: tefca-viewer-app
 serviceName: tefca-viewer-service
-databaseUrl: database-url
+jdbcDatabaseConnectionString: jdbc:postgresql://db:5432/tefca_db?user=postgres&password=pw&ssl=true
+databaseConnectionString: postgres://postgres:pw@db:5432/tefca_db

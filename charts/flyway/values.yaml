@@ -1,0 +1,12 @@
+db:
+  connectionString: "postgresql://db_user:db_password@postgres-db:5432/my_database" # need to modify
+flyway:
+  image: flyway/flyway:10.16-alpine
+  configFile: /flyway/conf/flyway.conf
+  schemas: public
+  connectRetries: 60
+  sqlDir: ./sql
+
+name: flyway
+appName: flyway-app
+serviceName: flyway-service

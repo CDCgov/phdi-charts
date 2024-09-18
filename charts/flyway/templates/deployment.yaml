@@ -1,0 +1,30 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: "{{.Release.Name}}-{{.Values.appName}}"
+spec:
+  template:
+    spec:
+      containers:
+        - name: flyway
+          image: "{{.Values.flyway.image}}"
+          command:
+            [
+              "migrate",
+              "-url={{ .Values.db.connectionString }}",
+              "-configFiles={{ .Values.flyway.configFile }}",
+              "-schemas={{ .Values.flyway.schemas }}",
+              "-connectRetries={{ .Values.flyway.connectRetries }}",
+            ]
+          volumeMounts:
+            - name: flyway-sql
+              mountPath: /flyway/sql
+            - name: flyway-conf
+              mountPath: /flyway/conf
+      volumes:
+        - name: flyway-sql
+          configMap:
+            name: flyway-sql
+        - name: flyway-conf
+          configMap:
+            name: flyway-conf

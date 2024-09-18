@@ -18,7 +18,7 @@ spec:
       imagePullSecrets:
       containers:
         - name: {{.Chart.Name}}
-          image: ghcr.io/cdcgov/phdi/{{.Values.name}}:{{ .Values.image.tag }}
+          image: ghcr.io/cdcgov/phdi/{{.Values.name}}:{{.Values.image.tag}}
           imagePullPolicy: {{.Values.image.pullPolicy}}
           ports:
             - name: {{.Chart.Name | trunc 15}}
@@ -28,5 +28,11 @@ spec:
               value: {{.Values.fhirUrl}}
             - name: cred_manager
               value: {{.Values.credManager}}
-            - name: database_url
-              value: {{.Values.databaseUrl}}
+            - name: DATABASE_URL
+              value: {{.Values.databaseConnectionString}}
+          # command: ["echo", "DATABASE_URL={{.Values.databaseConnectionString}}>"containers/tefca-viewer/tefca.env;", "node", "containers/tefca-viewer/server.js"]
+      initContainers:
+        - name: flyway
+          image: ghcr.io/cdcgov/phdi/{{.Values.name}}-flyway:1.6.6
+          imagePullPolicy: {{.Values.image.pullPolicy}}
+          args: ["-schemas=public", "-connectRetries=10", "-url={{.Values.jdbcDatabaseUrl}}", "-user={{.Values.jdbcDatabaseUser}}", "-password={{.Values.jdbcDatabasePassword}}", "-locations=filesystem:/flyway/sql", "migrate"]

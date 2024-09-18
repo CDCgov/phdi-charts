@@ -18,7 +18,7 @@ spec:
       imagePullSecrets:
       containers:
         - name: {{.Chart.Name}}
-          image: ghcr.io/cdcgov/phdi/{{.Values.name}}:{{ .Values.image.tag }}
+          image: ghcr.io/cdcgov/phdi/{{.Values.name}}:{{.Values.image.tag}}
           imagePullPolicy: {{.Values.image.pullPolicy}}
           ports:
             - name: {{.Chart.Name | trunc 15}}
@@ -29,4 +29,9 @@ spec:
             - name: cred_manager
               value: {{.Values.credManager}}
             - name: database_url
-              value: {{.Values.databaseUrl}}
+              value: {{.Values.databaseConnectionString}}
+      initContainers:
+        - name: flyway
+          image: ghcr.io/cdcgov/phdi/{{.Values.name}}-flyway:{{.Values.image.tag}}
+          args: ["-configFiles=/flyway/conf/flyway.conf", "-schemas=public", "-connectRetries=10", "-url={{.Values.jdbcDatabaseConnectionString}}", "migrate"]
+          restartPolicy: Never

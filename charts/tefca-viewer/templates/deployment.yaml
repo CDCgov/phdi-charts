@@ -29,7 +29,7 @@ spec:
             - name: cred_manager
               value: {{.Values.credManager}}
             - name: DATABASE_URL
-              value: "{{.Values.databaseConnectionString}}?sslmode=disable"
+              value: "{{.Values.databaseConnectionString}}"
           # command: ["/bin/sh"]
           # args: ["-c", "echo DATABASE_URL={{.Values.databaseConnectionString}} > containers/tefca-viewer/tefca.env && docker-entrypoint.sh node containers/tefca-viewer/server.js"]
       # initContainers:

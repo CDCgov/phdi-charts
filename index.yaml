@@ -950,6 +950,15 @@ entries:
     version: 0.1.0
   tefca-viewer:
   - apiVersion: v2
+    created: "2024-10-01T15:25:46.044561231Z"
+    description: A Helm chart for Kubernetes
+    digest: 2029107f520e1903af63bea7d717df92a81f7414f87ae952563f66320eeb6e73
+    name: tefca-viewer
+    type: application
+    urls:
+    - https://github.com/CDCgov/phdi-charts/releases/download/tefca-viewer-0.4.25/tefca-viewer-0.4.25.tgz
+    version: 0.4.25
+  - apiVersion: v2
     created: "2024-09-24T21:39:54.113338931Z"
     description: A Helm chart for Kubernetes
     digest: f0032825ce76c755f4df3abadc775300079ec6504d47b319ffb7f2a4b2a75b2c
@@ -1324,4 +1333,4 @@ entries:
     urls:
     - https://github.com/CDCgov/phdi-charts/releases/download/validation-chart-0.1.0/validation-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2024-09-24T21:39:54.37553847Z"
+generated: "2024-10-01T15:25:46.044866583Z"

@@ -12,3 +12,10 @@ service:
 name: tefca-viewer
 appName: tefca-viewer-app
 serviceName: tefca-viewer-service
+tefcaViewerDBRoleArn: placeholder-arn
+jdbcDatabaseUrl: jdbc-placeholder-string
+jdbcDatabaseUser: postgres
+jdbcDatabasePassword: pw
+#jdbc:postgresql://db:5432/tefca_db?user=postgres&password=pw&ssl=true
+databaseConnectionString: jdbc-placeholder-string
+#postgres://postgres:pw@db:5432/tefca_db

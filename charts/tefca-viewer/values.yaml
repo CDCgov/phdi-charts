@@ -2,9 +2,9 @@
 replicaCount: 1
 
 image:
-    repository: ghcr.io/cdcgov/phdi/tefca-viewer
+    repository: ghcr.io/cdcgov/dibbs-query-connector/query-connector
     pullPolicy: Always
-    tag: dev
+    tag: latest
 
 service:
     port: 3000

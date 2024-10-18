@@ -2,9 +2,9 @@
 replicaCount: 1
 
 image:
-    repository: ghcr.io/cdcgov/phdi/tefca-viewer
+    repository: ghcr.io/cdcgov/dibbs-query-connector/query-connector
     pullPolicy: Always
-    tag: dev
+    tag: latest
 
 service:
     port: 3000
@@ -12,3 +12,10 @@ service:
 name: tefca-viewer
 appName: tefca-viewer-app
 serviceName: tefca-viewer-service
+tefcaViewerDBRoleArn: placeholder-arn
+jdbcDatabaseUrl: jdbc-placeholder-string
+jdbcDatabaseUser: postgres
+jdbcDatabasePassword: pw
+#jdbc:postgresql://db:5432/tefca_db?user=postgres&password=pw&ssl=true
+databaseConnectionString: jdbc-placeholder-string
+#postgres://postgres:pw@db:5432/tefca_db

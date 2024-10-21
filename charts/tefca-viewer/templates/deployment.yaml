@@ -18,7 +18,7 @@ spec:
       imagePullSecrets:
       containers:
         - name: {{.Chart.Name}}
-          image: {{.Values.image.repository}}:{{.Values.image.tag}}
+          image: {{.Values.image.repository}}:latest
           imagePullPolicy: {{.Values.image.pullPolicy}}
           ports:
             - name: {{.Chart.Name | trunc 15}}

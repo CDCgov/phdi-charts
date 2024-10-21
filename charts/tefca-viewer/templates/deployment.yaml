@@ -30,3 +30,5 @@ spec:
               value: {{.Values.credManager}}
             - name: DATABASE_URL
               value: "{{.Values.databaseConnectionString}}"
+            - name: FLYWAY_URL
+              value: "{{.Values.jdbcDatabaseUrl}}"

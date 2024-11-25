@@ -5,10 +5,6 @@ name: Updates Chart Version
 on:
     repository_dispatch:
         types: [trigger-workflow]
-    push:
-        branches:
-            - shanice/new-image
-
 
 permissions:
     id-token: write

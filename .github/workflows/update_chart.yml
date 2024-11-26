@@ -20,7 +20,7 @@ jobs:
               uses: actions/checkout@v4
 
 
-            - name: Extract Service Name & Version
+            - name: Extract Service Name & Version & Git sha
               run: |
                   # Parse the service name from the payload
                   service_name=${{ github.event.client_payload.service }}
@@ -29,6 +29,10 @@ jobs:
                   # Parse the version from the payload
                   version=${{ github.event.client_payload.version }}
                   echo "Version: $version"
+
+                  #Parse the git sha
+                  GIT_SHA = ${{ github.event.client_payload.GIT_SHA }}
+                  echo "GIT_SHA: $GIT_SHA"
 
             - name: Set up Python (for yq)
               uses: actions/setup-python@v4

@@ -2,9 +2,9 @@
 replicaCount: 1
 
 image:
-    repository: ghcr.io/cdcgov/dibbs-query-connector/query-connector
+    repository: ghcr.io/cdcgov/dibbs-query-connector
     pullPolicy: Always
-    tag: latest
+    tag: $GIT_SHA
 
 service:
     port: 3000
